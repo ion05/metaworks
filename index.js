@@ -26,7 +26,7 @@ const dashboardRoute = require('./routes/dashboardRoute');
 const authRoute = require('./routes/authRoute');
 
 app.use(indexRoute)
-app.use(dashboardRoute)
-app.use(authRoute)
+// app.use(dashboardRoute)
+// app.use(authRoute)
 
 
