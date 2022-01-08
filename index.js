@@ -2,13 +2,26 @@ const express = require('express');
 const mongoose = require('mongoose');
 const ejs = require('ejs')
 const path = require('path');
+const  expressLayouts = require('express-ejs-layouts')
+const session = require('express-session')
 require('dotenv').config();
+
+var passport = require('passport');
+require('./config/passport')(passport)
 
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+app.use(expressLayouts)
+app.use(session({
+    secret: process.env.SECRET,
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 
 const mongoPass = process.env.MONGO_PASS;
 const PORT = process.env.PORT || 5000 ;
@@ -26,7 +39,7 @@ const dashboardRoute = require('./routes/dashboardRoute');
 const authRoute = require('./routes/authRoute');
 
 app.use(indexRoute)
-// app.use(dashboardRoute)
-// app.use(authRoute)
+app.use('/dashboard',dashboardRoute)
+app.use(authRoute)
 
 
