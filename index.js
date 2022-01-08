@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 const mongoPass = process.env.MONGO_PASS;
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000 ;
 const mongoURI = `mongodb+srv://ion05:${mongoPass}@cluster0.qwcg0.mongodb.net/data?retryWrites=true&w=majority`
 mongoose.connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true}).then((result)=> {
     console.log('Connected MongoDB')
