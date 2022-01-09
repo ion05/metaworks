@@ -1,6 +1,15 @@
-<h1>Login</h1>
-<form action="/login" method="post">
-    <input type="text" name="email" id="" placeholder="email">
-    <input type="password" name="password" id="" placeholder="password">
-    <input type="submit" value="login">
-</form>
+<div class="login-div">    
+    <h1>Login</h1>
+    <p>Don't have an account? <a href='/register'>Register</a> </p>
+    <form action="/login" method="post">
+        <div class="form-gp">
+            <label for="">Your Email</label> <br>
+            <input type="text" name="email" id="" placeholder="john@doe.com">
+        </div>
+        <div class="form-gp">
+            <label for="">Your Password</label> <br>
+            <input type="password" name="password" id="" placeholder="at least 6 characters">
+        </div>
+        <input type="submit" value="Login" class="submit">
+    </form>
+</div>
