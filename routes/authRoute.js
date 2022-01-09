@@ -8,14 +8,13 @@ const passport = require('passport')
 
 router.post('/register',(req,res)=>{
     const {
-        fullname,
         username,
         email,
         password,
         password2
     } = req.body
     let errors = []
-    if(!fullname || !username || !email || !password || !password2){
+    if(!username || !email || !password || !password2){
         errors.push({msg: 'Please fill in all fields'})
     }
     if(password !== password2){
@@ -25,9 +24,9 @@ router.post('/register',(req,res)=>{
         errors.push({msg: 'Password is short'})
     }
     if(errors.length>0){
+        console.log(errors)
         res.render('register',{
             errors,
-            fullname,
             username,
             email,
             password,
@@ -35,13 +34,13 @@ router.post('/register',(req,res)=>{
         })
     }
     else{
-        User.findOne({email: email, username: username})
+        User.findOne({email: email})
         .then((user)=>{
             if(user){
-                errors.push({msg: 'Email or username already exists'})
+                errors.push({msg: 'An account with the email already exists'})
+                console.log(errors)
                 res.render('register',{
                     errors,
-                    fullname,
                     username,
                     email,
                     password,
@@ -49,26 +48,42 @@ router.post('/register',(req,res)=>{
                 })
             }
             else{
-                var newUser = new User({
-                    fullname,
+                User.findOne({username: username}).then((user)=>{
+                    if(user){
+                        errors.push({msg: 'An account with the username already exists'})
+                        console.log(errors)
+                        res.render('register',{
+                            errors,
+                            username,
+                            email,
+                            password,
+                            password2
+                        })
+                    }
+                    else{
+
+                    var newUser = new User({
                     username,
                     email
-                })
-                bcrypt.genSalt(10,(err,salt)=>{
-                    bcrypt.hash(password,salt,(err,hash)=>{
-                        if(err) throw err;
-                        newUser.password = hash;
-                        newUser.save()
-                        .then(()=>{
-                            console.log('User created')
-                            res.redirect('/login')
-                        })
-                        .catch((err)=>{
-                            console.log(err)
+                    })
+                    bcrypt.genSalt(10,(err,salt)=>{
+                        bcrypt.hash(password,salt,(err,hash)=>{
+                            if(err) throw err;
+                            newUser.password = hash;
+                            newUser.save()
+                            .then(()=>{
+                                console.log('User created')
+                                res.redirect('/login')
+                            })
+                            .catch((err)=>{
+                                console.log(err)
+                            })
                         })
                     })
-                })
             }
+        })
+    }
+    
         })
     }
 })

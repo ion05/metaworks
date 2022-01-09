@@ -4,17 +4,20 @@ const ejs = require('ejs')
 const path = require('path');
 const  expressLayouts = require('express-ejs-layouts')
 const session = require('express-session')
+const cookieParser = require('cookie-parser')
 require('dotenv').config();
 
 var passport = require('passport');
 require('./config/passport')(passport)
 
 const app = express();
+const secret = process.env.SECRET;
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(expressLayouts)
+app.use(cookieParser(secret))
 app.use(session({
     secret: process.env.SECRET,
     resave: true,
