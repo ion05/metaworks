@@ -1,8 +1,20 @@
-<h1>Register</h1>
-<form action="/register" method="post">
-    <input type="text" name="username" id="" placeholder="john10">
-    <input type="text" name="email" id="" placeholder="johndoe@gmail.com">
-    <input type="password" name="password" id="" placeholder="Repeat Password">
-    <input type="password" name="password2" id="" placeholder="Repeat Password">
-    <input type="submit" value="Register">
-</form>
+<div class="reg-div">
+    <h1>Create new account</h1>
+    <p>Already have an account? <a href="/login">Login</a></p>
+    <form action="/register" method="post">
+        <div class="form-gp">
+            <label for="">Fullname</label>
+            <input type="text" name="username" id="" placeholder="john10">
+        </div>
+        <div class="form-gp">
+            <label for="">Email</label>
+            <input type="text" name="email" id="" placeholder="johndoe@gmail.com">
+        </div>
+        <div class="form-gp">
+            <label for="">Password</label>
+            <input type="password" name="password" id="" placeholder="Should be more than 6 characters">
+        </div>
+        <input type="password" name="password2" id="" placeholder="Repeat Password">
+        <input type="submit" value="Register">
+    </form>
+</div>
