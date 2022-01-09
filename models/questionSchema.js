@@ -5,6 +5,7 @@ const reqNumber = {type: Number, required: true};
 const questionSchema = new mongoose.Schema({
     question:  reqString,
     answer : reqString,
+    number: reqNumber
 })
 
 const Question = mongoose.model('question', questionSchema);
