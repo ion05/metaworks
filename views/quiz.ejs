@@ -1,1 +1,8 @@
 <h1>Quiz</h1>
+<form action="/dashboard/quiz" method="post">
+    <% for( let i = 0; i < questions.length; i++ ) { %>
+    <p> <%= questions[i]%> </p>
+    <input type="text" name="answer<%= i+1 %>" id="" placeholder="Answer">
+    <% } %>
+    <button type="submit">Submit</button>
+</form>
