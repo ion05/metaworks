@@ -276,9 +276,14 @@ body{
 }
 .login-div,.reg-div{
     position: absolute;
-    margin-top: 9.5vw;
     width: 35vw;
     margin-left: 10vw;
+}
+.login-div{
+    margin-top: 9.5vw;
+}
+.reg-div{
+    margin-top: 6.75vw;
 }
 .login-div h1,.reg-div h1{
     font-size: 3.5vw;
@@ -313,7 +318,7 @@ body{
 .form-gp input:focus{
     outline: none !important; 
 }
-.login-div .submit{
+.login-div .submit, .reg-div .submit{
     width: 15vw;
     height: 3vw;
     font-size: 1.25vw;
@@ -322,4 +327,169 @@ body{
     color: #eee;
     border-radius: 2vw;
     cursor: pointer;
+}
+.error-div{
+    color: red;
+}
+.dashboard-div{
+    background: #121E2A;
+    height: 100vh;
+}
+.name-div{
+    background: #172231;
+    color: #FAC762;
+    font-size: 1.5vw;
+    width: 25vw;
+    height: 5vw;
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+}
+.name-div h4{
+    margin-top: 1.5vw;
+}
+.name-div span{
+    position: absolute;
+    margin-left: -53.5vw;
+    margin-top: 1.75vw;
+}
+.dashboard-div h1{
+    font-size: 10vw;
+    color: #172231;
+    letter-spacing: 1px;
+    position: absolute;
+    margin-top: 41vw;
+    text-align: center;
+}
+.nav-dash{
+    list-style: none;
+    display: flex;
+    color: #eee;
+    width: 20vw;
+    position: absolute;
+    margin-left: 41.25vw;
+    margin-top: 45vw;
+    font-size: 1.25vw;
+}
+.nav-dash a{
+    color: #eee;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+.nav-dash #a-1:after, #a-2:after, #a-3:after{
+    content: '';
+    display: block;
+    width: 0%;
+    margin: 0 auto;
+    transition: all .4s ease;
+}
+#a-1:hover{
+    color: #F47960;
+}
+#a-1:hover:after{
+    background:#F47960;
+}
+#a-2:hover{
+    color: #35DF91;
+}
+#a-2:hover:after{
+    background: #35DF91;
+}
+#a-3:hover{
+    color: #FAC762;
+}
+#a-3:hover:after{
+    background: #FAC762;
+}
+.nav-dash #a-1:hover:after, #a-2:hover:after,#a-3:hover:after {
+    width: 80%;
+    height: 2px;
+    margin-left: -15px;
+}
+.log-dash-i{
+    position: absolute;
+    width: 2.5vw;
+    height: 2.5vw;
+    background: #eee;
+    border-radius: 100%;
+    margin-left: 3.5vw;
+    margin-top: 45vw;
+}
+.line-1,
+.line-2{
+    background: #eee;
+    height: 3.5px;
+    width: 100%;
+}
+.line-div-1{
+    width: 3.5vw;
+    display: none;
+    cursor: pointer;
+}
+.line-2{
+    margin-top: 0.2vw;
+}
+.user-prof-icon{
+    position: absolute;
+    margin-left: 89vw;
+    margin-top: 45vw;
+}
+.line-div{
+    width: 2vw;
+    height: 10px;
+    cursor: pointer;
+}
+.user-blob{
+    position: absolute;
+    margin-top: 35vw;
+    width: 15vw;
+    height: 7.4vw;
+    background: #172231;
+    margin-left: 77.5vw;
+    padding:5px;
+    border-radius: 10px;
+    display: none;
+}
+.user-blob span{
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    padding-top: .5vw;
+    width: 14.3vw;
+    padding-bottom: .5vw;
+    margin-top: 4vw;
+}
+.user-blob span:hover{
+    background: red;
+}
+.user-blob span:hover a {
+    color: #eee;
+}
+.user-blob a{
+    text-decoration: none;
+    color: #eee;
+    margin-bottom: 5vw;
+    letter-spacing: 1px;
+}
+.user-blob .prof{
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    padding-top: .5vw;
+    width: 14.3vw;
+    padding-bottom: .5vw;
+    margin-top: .5vw;
+}
+.user-blob .prof:hover{
+    background: transparent;
+}
+.user-blob .prof a:hover{
+    color: #33A9FE;
+}
+.line{
+    position: absolute;
+    width: 12.5vw;
+    margin-left: 1vw;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 3.5vw;
 }

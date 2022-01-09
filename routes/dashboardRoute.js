@@ -13,7 +13,9 @@ const Question = require('../models/questionSchema');
 router.get('/', ensureAuthenticated, (req, res) => {
     const firstLogin = req.cookies.firstLogin || true;
     if (firstLogin== "false") {
-        res.render('dashboard')
+        res.render('dashboard',{
+            name: req.user.username,
+        })
     } else {
         res.cookie('firstLogin', false)
         res.redirect('/dashboard/intro')
