@@ -1,11 +1,27 @@
 const mongoose = require('mongoose');
 const reqString = {type: String, required: true};
+const reqNumber = {type: Number, required: true};
 
 const userSchema = new mongoose.Schema({
-    fullname : reqString,
     username:  reqString,
     email : reqString,
     password : reqString,
+    money: {
+        type: Number,
+        default: 1000,
+        required: true
+    },
+    energy: {
+        type: Number,
+        default: 30,
+        required: true
+    },
+    maxEnergy: {
+        type: Number,
+        default: 30,
+        required: true
+    },
+    
 },{
     timestamps: true
 })
