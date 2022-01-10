@@ -335,39 +335,34 @@ body{
     background: #121E2A;
     height: 100vh;
 }
-.name-div{
-    background: #172231;
-    color: #FAC762;
-    font-size: 1.5vw;
-    width: 25vw;
-    height: 5vw;
-    border-bottom-left-radius: 1.5vw;
-    border-bottom-right-radius: 1.5vw;
-}
-.name-div h4{
-    margin-top: 1.5vw;
-}
-.name-div span{
-    position: absolute;
-    margin-left: -53.5vw;
-    margin-top: 1.75vw;
-}
 .dashboard-div h1{
     font-size: 10vw;
     color: #172231;
     letter-spacing: 1px;
     position: absolute;
-    margin-top: 41vw;
+    margin-top: 46.5vw;
     text-align: center;
 }
 .nav-dash{
-    list-style: none;
-    display: flex;
-    color: #eee;
-    width: 20vw;
     position: absolute;
-    margin-left: 41.25vw;
-    margin-top: 45vw;
+    margin-top: 50vw;
+    margin-left: 37.5vw;
+}
+.nav-dash-ul {
+    display: flex;
+    width: 25vw;
+}
+#a-2{
+    margin-left: -1vw;
+    position: absolute;
+}
+#a-3{
+    position: absolute;
+}
+.nav-dash-ul li{
+    list-style: none;
+    flex: 0 1 auto; 
+    color: #eee;
     font-size: 1.25vw;
 }
 .nav-dash a{
@@ -375,36 +370,19 @@ body{
     text-decoration: none;
     transition: all 0.2s ease;
 }
-.nav-dash #a-1:after, #a-2:after, #a-3:after{
-    content: '';
-    display: block;
-    width: 0%;
-    margin: 0 auto;
-    transition: all .4s ease;
-}
+
 #a-1:hover{
     color: #F47960;
 }
-#a-1:hover:after{
-    background:#F47960;
-}
+
 #a-2:hover{
     color: #35DF91;
 }
-#a-2:hover:after{
-    background: #35DF91;
-}
+
 #a-3:hover{
     color: #FAC762;
 }
-#a-3:hover:after{
-    background: #FAC762;
-}
-.nav-dash #a-1:hover:after, #a-2:hover:after,#a-3:hover:after {
-    width: 80%;
-    height: 2px;
-    margin-left: -15px;
-}
+
 .log-dash-i{
     position: absolute;
     width: 2.5vw;
@@ -412,7 +390,7 @@ body{
     background: #eee;
     border-radius: 100%;
     margin-left: 3.5vw;
-    margin-top: 45vw;
+    margin-top: 50vw;
 }
 .line-1,
 .line-2{
@@ -430,8 +408,8 @@ body{
 }
 .user-prof-icon{
     position: absolute;
-    margin-left: 89vw;
-    margin-top: 45vw;
+    margin-left: 91.5vw;
+    margin-top: 50vw;
 }
 .line-div{
     width: 2vw;
@@ -440,10 +418,10 @@ body{
 }
 .user-blob{
     position: absolute;
-    margin-top: 35vw;
+    margin-top: 40vw;
     width: 15vw;
     height: 7.4vw;
-    background: #172231;
+    background: rgba(0, 0, 0  ,0.5);
     margin-left: 77.5vw;
     padding:5px;
     border-radius: 10px;
@@ -492,4 +470,207 @@ body{
     height: 2px;
     background: rgba(255, 255, 255, 0.1);
     margin-top: 3.5vw;
+}
+.prof-div{
+    width: 20vw;
+    height: 40vw;
+    background: #172231;
+    position: absolute;
+    border-radius: 1.5vw;
+    margin-top: 4.5vw;
+    margin-left: 3.5vw;
+}
+.button-div{
+    width: 17.5vw;
+    height: 15vw;
+    background: #1F2E43;
+    margin-left: 1.35vw;
+    margin-top: 23.5vw;
+    border-radius: 1.5vw;
+}
+.log-info{
+    position: absolute;
+    text-align: center;
+    margin-top: 1.5vw;
+}
+.log-info #log{ 
+    color: #eee;
+    font-size: 13.5vw;
+}
+.log-info h2{
+    color: #eee;
+}
+.user-s {
+    display: flex;
+    font-size: 1.5vw;
+    font-weight: 800;
+    width: 15vw;
+    margin-left: 2vw;
+    margin-top: 15px;
+}
+.energy{
+    color: #FAC762;
+}
+.money{
+    color: #35DF91;
+}
+.log-info h5{
+    color: #35DF91;
+    margin-top: 10px;
+}
+.button-div{
+    padding-top: 1.5vw;
+}
+.icons-1,.icons-2{
+    display: flex;
+    text-align: center;
+    font-size: 1.5vw;
+
+    margin-top: 1vw;
+}
+.icons-2{
+    margin-top: 2vw;
+}
+.suit{
+    color: #35DF91;
+}
+.complain{
+    color: #F47960;
+}
+.rest{
+    color: #eee;
+}
+.repo{
+    color: #eee;
+}
+.status-icon{
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    background: #35DF91;
+    margin-top: -8.5vw;
+    border-radius: 100%;
+    margin-left: 13.5vw;
+    border: 5px solid #172231;
+}
+.curr-div{
+    position: absolute;
+    color: #eee;
+    margin-left: 30vw;
+    margin-top: 13.5vw;
+}
+.curr-line{
+    width: 3.5vw;
+    height: 3.5px;
+    border-radius: 10px;
+    background-color: #33A9FE;
+}
+.curr-div h2,.job-stats h2{
+    margin-top: 0.5vw;
+    letter-spacing: 2px;
+}
+.timeline-list{
+    margin-top: 2.5vw;
+}
+.job-stats{
+    position: absolute;
+    color: #eee;
+    margin-top:13.5vw;
+    margin-left: 70vw;
+}
+.material-icons-round{
+    font-family: 'Material Icons', sans-serif;
+}
+.rate{
+    margin-top: 1.5vw;
+    font-size: 2vw;
+    color: #33A9FE;
+    margin-left: 1vw;
+}
+.rate p {
+    font-size: 1.2vw;
+    color: #eee;
+    font-weight: lighter;
+}
+.graph-div{
+    margin-top: 3.75vw;
+    width: 22.5vw;
+    height: 19vw;
+    background-color: #1F2E43;
+    padding: 1vw;
+    border-radius: 10px;
+}
+.l{
+    background-color: #33A9FE;
+    width: 2.5vw;
+    height: 0.25vw;
+    border-radius: 10px;
+    margin-left: 0.25vw;
+    margin-top: 0.5vw;
+}
+.graph-div h3{
+    letter-spacing: 1px;
+    margin-left: 0.25vw;
+    margin-top: .5vw;
+}
+.graph-div h3 span{
+    color: #33A9FE;
+}
+#m{
+    color: #35DF91;
+}
+#o{
+    color: #FAC762;
+}
+#c{
+    color: #F47960;
+}
+#m,#o,#c{
+    font-size: 2.5vw;
+    position: absolute;
+}
+.timeline-list li{
+    margin-bottom: 2.5vw;
+}
+.timeline-list li h4,.timeline-list li p{
+    margin-left: 4vw;
+    margin-top: 0.5vw;
+}
+.note-o,.note-s{
+    margin-left: 27.5vw;
+    margin-top: -5vw;
+    position: absolute;
+    font-size: 1.5vw;
+}
+.note-o{
+    padding-left: 1.5vw;
+    color: #FAC762;
+}
+.note-s{
+    color: #35DF91;
+}
+.hello-div{
+    position: absolute;
+    color: #eee;
+    margin-top: 3.5vw;
+    margin-left: 30vw;
+}
+.hello-div h2{
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+    margin-top: 1vw;
+    margin-left: 5vw;
+}
+.hello-div h2 span{
+    color: #33A9FE;
+}
+.hello-div p{
+    margin-left: 5vw;
+}
+.hello-div .material-icons-outlined{
+    font-size: 2.5vw;
+    color: #eee;
+    margin-left: 1vw;
+    margin-top: 2.85vw;
+    position: absolute;
 }
