@@ -2,6 +2,17 @@
     html{
         overflow-y: hidden;
     }
+    ::-webkit-scrollbar-track {
+    background-color: transparent;
+    }
+    ::-webkit-scrollbar {
+        width: 8px !important;
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+  
 </style>
 <div class="dashboard-div">
     <div class="hello-div">
@@ -19,7 +30,7 @@
                 account_circle
             </span>
             <div class="powerup"></div>
-            <h2><%=name%></h2>
+            <h2><%=user.username%></h2>
             <h5>
                 AMATEUR
             </h5>
@@ -29,13 +40,13 @@
                     <span class="material-icons-outlined">
                         flash_on
                     </span>
-                    50%
+                    <%= energy_per %>%
                 </div>
                 <div class="money">
                     <span class="material-icons-outlined">
                         attach_money
                     </span>
-                    100
+                    <%= user.money %>
                 </div>
             </div>
         </div>
@@ -79,51 +90,56 @@
         <div class="curr-line"></div>
         <h2>Recent Activity</h2>
         <ul class="timeline-list">
-            <li>
-                <span class="material-icons-outlined" id="m">
-                    monetization_on
-                </span>
-                <h4>
-                    Lorem Ipsum
-                </h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing <br>
-                    elit. Expedita doloremque praesentium ipsa! 
-                </p>
-                <div class="note-s">
-                    <span class="material-icons-outlined">
-                        attach_money
-                    </span> +25
-                </div>
-            </li>
-            <li>
-                <span class="material-icons-outlined" id="c">
-                    circle_notifications
-                    </span>
-                <h4>
-                    Lorem Ipsum
-                </h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing <br>
-                    elit. Expedita doloremque praesentium ipsa! 
-                </p>
-            </li>
-            <li>
-                <span class="material-icons-outlined" id="o">
-                    offline_bolt
-                </span>
-
-                <h4>
-                    Lorem Ipsum
-                </h4>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing <br>
-                    elit. Expedita doloremque praesentium ipsa! 
-                </p>
-                <div class="note-o">
-                    -8%
-                </div>
-            </li>
+                <% for( let index = 0; index < activity_list.length; index++ ) { %>
+                     <li><% if (activity_list[index].money) { %>
+                        <span class="material-icons-outlined" id="m">
+                            monetization_on
+                        </span>
+                        <h4>
+                            <%= activity_list[index].name %>
+                        </h4>
+                        <p>
+                            Current Balance: <%= activity_list[index].money + user.money %>
+                        </p>
+                        <div class="note-s">
+                            <!-- +<span class="material-icons-outlined">
+                                attach_money
+                            </span> -->
+                            +<%=activity_list[index].money%>
+                        </div>
+                    <%}%></li>
+                    <li>
+                        <% if(activity_list[index].energy) { %>
+                            <span class="material-icons-outlined" id="o">
+                                offline_bolt
+                            </span>
+            
+                            <h4>
+                                <%=activity_list[index].name%>
+                            </h4>
+                            <p>
+                                Current Energy: <%=  Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) + energy_per %>%
+                            </p>
+                            <div class="note-o">
+                                <%= Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) %>%
+                            </div>
+                        <% } %>
+                    </li>
+                    <li>
+                        <% if(activity_list[index].reputation) { %>
+                            <span class="material-icons-outlined" id="c">
+                                circle_notifications
+                            </span>
+            
+                            <h4>
+                                <%=activity_list[index].name%>
+                            </h4>
+                            <p>
+                                Rewarded <%= activity_list[index].reputation %> points
+                            </p>
+                        <% } %>
+                    </li>
+                <%}%>
         </ul>
     </div>
     <div class="job-stats">
@@ -133,9 +149,19 @@
             <span class="material-icons-outlined">
                 star
             </span>
-            08
+            <% if(user.reputation < 10){ %> 
+                0<%= user.reputation %>
+            <% }else{ %>
+                <%= user.reputation %>
+            <%}%>
             <br>
-            <p>Whoo! Nice Work Bud.</p>
+            <% if(user.reputation > 0 && user.reputation < 5) {%>
+                <p>Hustle! Do tasks to get more points</p>
+            <% }else if (user.reputation >5 && user.repuation < 8){ %>
+                <p>Whoo! Nice Work Bud.</p>
+            <%} else {%>
+                <p> You're killing it. </p>
+            <%}%>
         </div>
         <div class="graph-div">
             <div class="l"></div>
@@ -147,8 +173,8 @@
     </div>
     <div class="nav-dash">
         <ul class="nav-dash-ul">
-            <li><a href="" id="a-1">Market</a></li>
-            <li><a href="" id="a-2" >Dashboard</a></li>
+            <li><a href="/dashboard/market" id="a-1">Market</a></li>
+            <li><a href="/dashboard" id="a-2" >Dashboard</a></li>
             <li><a href="" id="a-3">Leaderboard</a></li>
         </ul>
     </div>
@@ -174,6 +200,5 @@
     </div>
 </div>
 <script src="./js/app.js"></script>
-
 <!-- <h1>hello</h1>
 <a href="/dashboard/work">Work</a> -->

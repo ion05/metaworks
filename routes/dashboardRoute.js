@@ -15,11 +15,13 @@ router.get('/', ensureAuthenticated, (req, res) => {
     const firstLogin = req.cookies.firstLogin || true;
     if (firstLogin== "false") {
         activity.find({username:req.user.username}).then(data => {
-            console.log(data)
+            const energy= req.user.energy 
+            const maxenergy = req.user.maxEnergy
+            const energy_per = Math.round((energy/maxenergy)*100)
             res.render('dashboard',{
                 user: req.user,
-                activity:data,
-                name: req.user.username
+                activity_list: data,
+                energy_per
             })
         })
     } else {
@@ -141,5 +143,13 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
     })
     
 })
-
+router.get('/market',ensureAuthenticated, (req, res) => {
+    const energy= req.user.energy 
+    const maxenergy = req.user.maxEnergy
+    const energy_per = Math.round((energy/maxenergy)*100)
+    res.render('market',{
+        user: req.user,
+        energy_per
+    })
+})
 module.exports =  router;

@@ -331,11 +331,11 @@ body{
 .error-div{
     color: red;
 }
-.dashboard-div{
+.dashboard-div,.market-div{
     background: #121E2A;
     height: 100vh;
 }
-.dashboard-div h1{
+.dashboard-div h1,.market-div h1{
     font-size: 10vw;
     color: #172231;
     letter-spacing: 1px;
@@ -372,11 +372,11 @@ body{
 }
 
 #a-1:hover{
-    color: #F47960;
+    color: #35DF91;
 }
 
 #a-2:hover{
-    color: #35DF91;
+    color: #F47960;
 }
 
 #a-3:hover{
@@ -558,7 +558,10 @@ body{
     color: #eee;
     margin-left: 30vw;
     margin-top: 13.5vw;
+    overflow-y: scroll ;
+    height: 30vw; 
 }
+
 .curr-line{
     width: 3.5vw;
     height: 3.5px;
@@ -648,6 +651,7 @@ body{
 }
 .note-s{
     color: #35DF91;
+    padding-left: 1.5vw;
 }
 .hello-div{
     position: absolute;
@@ -661,6 +665,9 @@ body{
     margin-top: 1vw;
     margin-left: 5vw;
 }
+.hello-div span{
+    color: #33A9FE !important;
+}
 .hello-div h2 span{
     color: #33A9FE;
 }
@@ -673,4 +680,75 @@ body{
     margin-left: 1vw;
     margin-top: 2.85vw;
     position: absolute;
+}
+.note-s span{
+    margin-top: 15px;
+}
+.cart-div{
+    position: absolute;
+    height: 10vw;
+    margin-left:33.5vw;
+    margin-top: 3.5vw;
+}
+.cart-div span{
+    font-size: 2.5vw;
+    color: #35DF91;
+}
+.cart-div h2{
+    font-size: 2.5vw;
+    color: #eee;
+    letter-spacing: 1px;
+    margin-top: 1.35vw;
+    margin-left: 5vw;
+}
+.cart-div p{
+    color: #eee;
+    margin-left: 5vw;
+    margin-top: 1.5vw;
+}
+.cart-div .material-icons-outlined{
+    margin-left: 1vw;
+    margin-top: 1.5vw;
+    position: absolute;
+}
+.user-stats-div{
+    position: absolute;
+    display: flex;
+    width: 25vw;
+    font-size: 1.5vw;
+    background: #172231;
+    padding-left: 3.5vw;
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    margin-left: 6.5vw;
+    margin-top: 4.5vw;
+    border-radius: 1vw;
+}
+.reputation{
+    color: #33A9FE;
+}
+.market-h2{
+    position: absolute;
+    color: #eee;
+    letter-spacing: 1px;
+    margin-left: 8.5vw;
+    margin-top: 16.5vw;
+}
+.market-h2 h2{
+    margin-top: 5px;
+}
+.market-banner{
+    width: 25vw;
+    height: 25vw;
+    background: #172231;
+    position: absolute;
+    border-radius: 1.5vw;
+    margin-left: 6.5vw;
+    margin-top: 20.5vw;
+}
+.line-d{
+    width: 3.5vw;
+    height: 3.5px;
+    border-radius: 10px;
+    background-color: #35DF91;
 }

@@ -1,0 +1,80 @@
+<style>
+    html{
+        overflow-y: hidden
+    }
+</style>
+<div class="market-div">
+    <h1>Metaworks</h1>
+    <div class="user-blob">
+        <span class="prof">
+            <a href='' >Profile</a>
+        </span>
+        <div class="line"></div>
+        <span>
+            <a href="/logout" class="logout">Logout</a>
+        </span>
+    </div>
+    <div class="cart-div">
+        <span class="material-icons-outlined">
+            local_grocery_store
+        </span>
+        <h2>Shop<span>.</span> </h2>
+        <p>Purchase and experience new powerups</p>
+    </div>
+    <div class="user-stats-div">
+        <div class="money">
+            <span class="material-icons-outlined">
+                attach_money
+            </span>
+            <%= user.money %>
+        </div>
+        <div class="energy">
+            <span class="material-icons-outlined">
+                flash_on
+            </span>
+            <%= energy_per %>%
+        </div>
+        <div class="reputation">
+            <span class="material-icons-outlined">
+                star
+            </span>
+            <% if(user.reputation < 10){ %> 
+                0<%= user.reputation %>
+            <% }else{ %>
+                <%= user.reputation %>
+            <%}%>
+        </div>
+    </div>
+    <div class="market-h2">
+        <div class="line-d"></div>
+        <h2>
+            Currently Using
+        </h2>
+    </div>
+    <div class="market-banner">
+
+    </div>
+    <div class="power-up-div"></div>
+    <div class="currency-shop-div"></div>
+    <div class="nav-dash">
+        <ul class="nav-dash-ul">
+            <li><a href="/dashboard/market" id="a-1">Market</a></li>
+            <li><a href="/dashboard" id="a-2" >Dashboard</a></li>
+            <li><a href="" id="a-3">Leaderboard</a></li>
+        </ul>
+    </div>
+    <div class="user-prof-icon">
+        <div class="line-div">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+        </div>
+        <div class="line-div-1">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+        </div>
+    </div>
+</div>
+<script src="/js/app.js"></script>
+<!-- <h1>
+    Metaworks
+</h1> -->
