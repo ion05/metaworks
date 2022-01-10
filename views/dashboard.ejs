@@ -4,19 +4,154 @@
     }
 </style>
 <div class="dashboard-div">
-    <center>
-        <div class="name-div">
-            <span class="material-icons-outlined">
-                lightbulb
-                </span> <h4><%= name %></h4> 
-        </div>
-    </center>
+    <div class="hello-div">
+        <span class="material-icons-outlined">
+            home
+        </span>
+        <br>
+        <h2>Dashboard<span>.</span></h2>
+        <p>Welcome to our dashboard.</p>
+    </div>
     <h1>MetaWorks</h1>
-    <ul class="nav-dash">
-        <li><a href="" id="a-1">Lorem</a></li>
-        <li><a href="" id="a-2">Lorem</a></li>
-        <li><a href="" id="a-3">Lorem</a></li>
-    </ul>
+    <div class="prof-div">
+        <div class="log-info">
+            <span class="material-icons-outlined" id="log">
+                account_circle
+            </span>
+            <div class="powerup"></div>
+            <h2><%=name%></h2>
+            <h5>
+                AMATEUR
+            </h5>
+            <div class="status-icon"></div>
+            <div class="user-s">
+                <div class="energy">
+                    <span class="material-icons-outlined">
+                        flash_on
+                    </span>
+                    50%
+                </div>
+                <div class="money">
+                    <span class="material-icons-outlined">
+                        attach_money
+                    </span>
+                    100
+                </div>
+            </div>
+        </div>
+
+        <div class="button-div">
+            <div class="icons-1">
+                <div class="suit">
+                    <span class="material-icons-outlined">
+                        work
+                    </span>
+                    <br>
+                    work
+                </div>
+                <div class="complain">
+                    <span class="material-icons-outlined">
+                        error
+                    </span>
+                    <br>
+                    complain
+                </div>
+            </div>
+            <div class="icons-2">
+                <div class="rest">
+                    <span class="material-icons-outlined">
+                        airline_seat_flat
+                    </span>
+                    <br>
+                    rest
+                </div>
+                <div class="repo">
+                    <span class="material-icons-outlined">
+                        thumb_up
+                    </span>
+                    <br>
+                    reputation
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="curr-div">
+        <div class="curr-line"></div>
+        <h2>Recent Activity</h2>
+        <ul class="timeline-list">
+            <li>
+                <span class="material-icons-outlined" id="m">
+                    monetization_on
+                </span>
+                <h4>
+                    Lorem Ipsum
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                    elit. Expedita doloremque praesentium ipsa! 
+                </p>
+                <div class="note-s">
+                    <span class="material-icons-outlined">
+                        attach_money
+                    </span> +25
+                </div>
+            </li>
+            <li>
+                <span class="material-icons-outlined" id="c">
+                    circle_notifications
+                    </span>
+                <h4>
+                    Lorem Ipsum
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                    elit. Expedita doloremque praesentium ipsa! 
+                </p>
+            </li>
+            <li>
+                <span class="material-icons-outlined" id="o">
+                    offline_bolt
+                </span>
+
+                <h4>
+                    Lorem Ipsum
+                </h4>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                    elit. Expedita doloremque praesentium ipsa! 
+                </p>
+                <div class="note-o">
+                    -8%
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="job-stats">
+        <div class="curr-line"></div>
+        <h2>Job Reputation</h2>
+        <div class="rate">
+            <span class="material-icons-outlined">
+                star
+            </span>
+            08
+            <br>
+            <p>Whoo! Nice Work Bud.</p>
+        </div>
+        <div class="graph-div">
+            <div class="l"></div>
+            <h3>
+                Work Hours <span>coming soon</span>
+            </h3>
+
+        </div>
+    </div>
+    <div class="nav-dash">
+        <ul class="nav-dash-ul">
+            <li><a href="" id="a-1">Market</a></li>
+            <li><a href="" id="a-2" >Dashboard</a></li>
+            <li><a href="" id="a-3">Leaderboard</a></li>
+        </ul>
+    </div>
     <div class="log-dash-i"></div>
     <div class="user-blob">
         <span class="prof">
@@ -26,7 +161,6 @@
         <span>
             <a href="/logout" class="logout">Logout</a>
         </span>
-        
     </div>
     <div class="user-prof-icon">
         <div class="line-div">

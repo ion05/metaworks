@@ -3,7 +3,7 @@
     <h1>Create new account</h1>
     <p>Already have an account? <a href="/login">Login</a></p>
     <%- include('./partials/errors.ejs')  %> 
-    <form action="/register" method="post">
+    <form action="/register" method="post" autocomplete="off">
         <div class="form-gp">
             <label for="">Username</label> <br>
             <input type="text" name="username" id="" placeholder="john10">
