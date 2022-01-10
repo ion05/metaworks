@@ -8,3 +8,4 @@ document.querySelector('.line-div-1').addEventListener('click',()=>{
     document.querySelector('.line-div-1').style.display = 'none'
     document.querySelector('.line-div').style.display = 'block'
 })
+
