@@ -4,6 +4,7 @@ const router = express.Router();
 const question = require('../models/questionSchema')
 const user = require('../models/userSchema')
 const activity = require('../models/activitySchema')
+const randomsentence = require('random-sentence')
 
 const {
     ensureAuthenticated,
@@ -39,13 +40,13 @@ router.get('/intro', ensureAuthenticated ,(req, res) => {
 router.get('/work', ensureAuthenticated, async (req, res) => {
     // generate random number between 1 and 4 
     // const randomNumber = Math.floor(Math.random() * 4) + 1;
-    const randomNumber = 1;
+    const randomNumber = 2;
     // render the corresponding page
     switch(randomNumber)  {
         case 1:
             // get number of documents in quiz
             question.countDocuments({}, async (err, count) => {
-                console.log(count)
+                
                 if (err) {
                     console.log(err)
                 } else {
@@ -84,6 +85,14 @@ router.get('/work', ensureAuthenticated, async (req, res) => {
             }
         })
             break;
+        case 2:
+            const sentence = randomsentence({words:3})
+            res.render('sentence', {
+                sentence: sentence,
+                user: req.user
+            })
+            
+
     }
 })
 
