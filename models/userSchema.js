@@ -21,7 +21,11 @@ const userSchema = new mongoose.Schema({
         default: 30,
         required: true
     },
-    
+    reputation: {
+        type:Number, 
+        default:0,
+        required: true
+    }
 },{
     timestamps: true
 })

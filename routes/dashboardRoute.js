@@ -3,6 +3,7 @@ const express = require('express')
 const router = express.Router();
 const question = require('../models/questionSchema')
 const user = require('../models/userSchema')
+const activity = require('../models/activitySchema')
 
 const {
     ensureAuthenticated,
@@ -13,11 +14,17 @@ const Question = require('../models/questionSchema');
 router.get('/', ensureAuthenticated, (req, res) => {
     const firstLogin = req.cookies.firstLogin || true;
     if (firstLogin== "false") {
-        res.render('dashboard',{
-            name: req.user.username,
+        activity.find({username:req.user.username}).then(data => {
+            console.log(data)
+            res.render('dashboard',{
+                user: req.user,
+                activity:data,
+                name: req.user.username
+            })
         })
     } else {
         res.cookie('firstLogin', false)
+        
         res.redirect('/dashboard/intro')
     }
     
@@ -81,6 +88,8 @@ router.get('/work', ensureAuthenticated, async (req, res) => {
 router.post('/quiz', ensureAuthenticated, (req, res) => {
     const {answer1, answer2, answer3, answer4} = req.body
     const answers = req.cookies.answers  
+    // delete answers cookie
+    res.clearCookie('answers')
     console.log(answers)
     console.log(answer1, answer2, answer3, answer4)
     var correct = 0
@@ -109,7 +118,15 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
     } else {
         increase = -100
     }
-    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: -5}}, (err, doc) => {
+    const newActivity = new activity({
+        name: "Quiz",
+        username: username,
+        money: increase,
+        energy: -5,
+        reputation: 2,
+    })
+    newActivity.save()
+    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: -5, reputation: 2}}, (err, doc) => {
         if (err) {
             console.log(err)
         } else {
