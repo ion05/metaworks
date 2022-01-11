@@ -8,12 +8,10 @@
     </div>
     <div class="ans-div">
         <p id="sent"> <%=sentence%> </p>
-        <input type="text" name="answer" placeholder="Type here" id="ans">
+        <form action="/dashboard/sentence" method="post"></form>
+            <input type="text" name="answer" placeholder="Type here" id="ans">
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </div>
-
-
-
-
-
 <script src="../js/work.js"></script>

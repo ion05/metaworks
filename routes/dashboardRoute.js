@@ -15,7 +15,7 @@ const Question = require('../models/questionSchema');
 router.get('/', ensureAuthenticated, (req, res) => {
     const firstLogin = req.cookies.firstLogin || true;
     if (firstLogin== "false") {
-        activity.find({username:req.user.username}).then(data => {
+        activity.find({username:req.user.username}).sort({createdAt:-1}).then(data => {
             const energy= req.user.energy 
             const maxenergy = req.user.maxEnergy
             const energy_per = Math.round((energy/maxenergy)*100)
@@ -87,6 +87,7 @@ router.get('/work', ensureAuthenticated, async (req, res) => {
             break;
         case 2:
             const sentence = randomsentence({words:3})
+            res.cookie('sentence', sentence)
             res.render('sentence', {
                 sentence: sentence,
                 user: req.user
@@ -120,24 +121,29 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
     }
     const username = req.user.username
     var increase = 0
+    var repo = 0
     if (correct >3) {
         increase = 400
+        repo = 2
     }  else if (correct > 1) {
         increase = 200
+        repo = 2
     } else if (correct > 0) {
         increase = 100
+        repo = 0
     } else {
         increase = -100
+        repo = -1
     }
     const newActivity = new activity({
         name: "Quiz",
         username: username,
         money: increase,
         energy: -5,
-        reputation: 2,
+        reputation: repo,
     })
     newActivity.save()
-    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: -5, reputation: 2}}, (err, doc) => {
+    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: -5, reputation: repo}}, (err, doc) => {
         if (err) {
             console.log(err)
         } else {
@@ -159,6 +165,55 @@ router.get('/market',ensureAuthenticated, (req, res) => {
     res.render('market',{
         user: req.user,
         energy_per
+    })
+})
+router.post('/sentence', ensureAuthenticated, (req,res)=> {
+    const csentence = req.cookies.sentence
+    const sentence = req.body.sentence
+    res.clearCookie('sentence')
+    const username = req.user.username
+    var repo =0
+    if (sentence == csentence) {
+        var increase = 200
+        repo = 3
+    } else {
+        increase = -100
+        repo = -2
+    }
+    const newActivity = new activity({
+        name: "Sentence",
+        username: username,
+        money: increase,
+        energy: -5,
+        reputation: repo,
+    })
+    newActivity.save()
+    var correct = csentence==sentence ? "All correct" : "Incorrect"
+    user.findOneAndUpdate({username:username}, {$inc: {money: increase, energy:-5, reputation:3}}).then(doc => {
+        const money = doc.money
+        const energy = doc.energy
+        res.render('result', {
+            correct: correct,
+            activity:"sentence",
+            money, energy, increase
+        })
+    })
+})
+
+router.get('/rest', ensureAuthenticated, (req,res)=> {
+    
+    const username = req.user.username
+    const maxenergy = req.user.maxEnergy
+    user.findOneAndUpdate({username:username}, {$set: {energy: maxenergy}}).then(doc => {
+        const newactivity = new activity({
+            name: "Rest",
+            username: username,
+            money: -10,
+            energy: maxenergy,
+            reputation: 0,
+        })
+         newactivity.save()
+        res.redirect('/dashboard')
     })
 })
 module.exports =  router;
