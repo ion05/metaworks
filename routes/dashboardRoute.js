@@ -15,7 +15,7 @@ const Question = require('../models/questionSchema');
 router.get('/', ensureAuthenticated, (req, res) => {
     const firstLogin = req.cookies.firstLogin || true;
     if (firstLogin== "false") {
-        activity.find({username:req.user.username}).then(data => {
+        activity.find({username:req.user.username}).sort({createdAt:-1}).then(data => {
             const energy= req.user.energy 
             const maxenergy = req.user.maxEnergy
             const energy_per = Math.round((energy/maxenergy)*100)
@@ -197,6 +197,23 @@ router.post('/sentence', ensureAuthenticated, (req,res)=> {
             activity:"sentence",
             money, energy, increase
         })
+    })
+})
+
+router.get('/rest', ensureAuthenticated, (req,res)=> {
+    
+    const username = req.user.username
+    const maxenergy = req.user.maxEnergy
+    user.findOneAndUpdate({username:username}, {$set: {energy: maxenergy}}).then(doc => {
+        const newactivity = new activity({
+            name: "Rest",
+            username: username,
+            money: -10,
+            energy: maxenergy,
+            reputation: 0,
+        })
+         newactivity.save()
+        res.redirect('/dashboard')
     })
 })
 module.exports =  router;
