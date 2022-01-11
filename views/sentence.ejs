@@ -2,7 +2,8 @@
 <p>This 3 worded sentence will be visible for 10 seconds , memorise it then type it in the input again</p>
 
 <p id="sent"> <%=sentence%> </p>
-
-<input type="text" name="answer" placeholder="Type here" id="ans">
-
+<form action="/dashboard/sentence" method="post">
+    <input type="text" name="sentence" placeholder="Type here" id="ans">
+    <button type="submit">Submit</button>
+</form>
 <script src="../js/work.js"></script>
