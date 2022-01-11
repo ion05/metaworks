@@ -1,3 +1,8 @@
+<style>
+     html{
+        overflow-y: hidden;
+    }
+</style>
 <div class="sent-div">
     <div class="title-span">
         <span class="material-icons-outlined">
@@ -9,9 +14,10 @@
     <div class="ans-div">
         <p id="sent"> <%=sentence%> </p>
         <form action="/dashboard/sentence" method="post"></form>
-            <input type="text" name="answer" placeholder="Type here" id="ans">
-            <button type="submit">Submit</button>
+            <input type="text" name="answer" placeholder="Type here" id="ans"> <br>
+            <button class="a-b" type="submit">Submit</button>
         </form>
     </div>
+    <h1>Metaworks</h1>
 </div>
 <script src="../js/work.js"></script>

@@ -1,9 +1,25 @@
-
-<h1>Quiz</h1>
-<form action="/dashboard/quiz" method="post" autocomplete="off">
-    <% for( let i = 0; i < questions.length; i++ ) { %>
-    <p> <%= questions[i]%> </p>
-    <input type="text" name="answer<%= i+1 %>" id="" placeholder="Answer">
-    <% } %>
-    <button type="submit">Submit</button>
-</form>
+<style>
+    html{
+        overflow-y: hidden;
+    }
+</style>
+<div class="quiz-div">
+    <div class="quiz-span">
+        <span class="material-icons-outlined">
+            quiz
+        </span>
+        <h2>
+            Quiz<span>.</span>
+        </h2>
+        <p>Test your knowledge</p>
+    </div>
+    <div class="quiz-form">
+        <form action="/dashboard/quiz" method="post" autocomplete="off">
+            <% for( let i = 0; i < questions.length; i++ ) { %>
+                <p> <%= questions[i]%> </p>
+                <input type="text" name="answer<%= i+1 %>" id="" placeholder="Answer">
+            <% } %>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>

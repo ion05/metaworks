@@ -820,3 +820,81 @@ body{
 .ans-div input:focus{
     outline: none;
 }
+.a-b{
+    width: 20vw;
+    font-family: 'sofia pro';
+    height: 3.5vw;
+    background: #33A9FE;
+    font-size: 2vw;
+    color: #eee;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 2vw;
+    cursor: pointer;
+    margin-top: 5vw;
+    margin-left: 5vw;
+}
+.sent-div h1{
+    font-size: 10vw;
+    color: #172231;
+    letter-spacing: 1px;
+    position: absolute;
+    margin-top: 46.5vw;
+    text-align: center;
+}
+.quiz-div{
+    height: 100vw;
+    background: #121E2A;
+    color: #eee;
+}
+.quiz-div h2{
+    font-size: 3.5vw;
+    letter-spacing: 1px;
+}
+.quiz-div h2 span{
+    color: #F47960;
+}
+.quiz-span{
+    position: absolute;
+    margin-top: 5vw;
+    padding-left: 15vw;
+}
+.quiz-form{
+    margin-top: 15vw;
+    width: 40vw;
+    margin-left: 20.5vw;
+}
+.quiz-form p{
+    letter-spacing: 1px;
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    margin-top: 00.5vw;
+}
+.quiz-form input{
+    font-family: 'sofia pro', sans-serif;
+    height: 2.5vw;
+    padding-left: 1.5vw;
+    font-size: 1.5vw;
+    border-bottom: 2px solid #33A9FE;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    padding-bottom: 0.5vw;
+    color: #eee;
+}
+.quiz-form input:focus{
+    outline: none;
+}
+.quiz-form button{
+    margin-top: 5vw;
+    font-family: 'sofia pro', sans-serif;
+    width: 20vw;
+    height: 3.5vw;
+    font-size: 2vw;
+    color: #eee;
+    background: #33A9FE;
+    border-radius: 2vw;
+    border:none;
+    cursor: pointer;
+}
