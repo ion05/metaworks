@@ -5,6 +5,7 @@ const question = require('../models/questionSchema')
 const user = require('../models/userSchema')
 const activity = require('../models/activitySchema')
 const randomsentence = require('random-sentence')
+const {energyCheck, moneyCheck, repoCheck, reset} = require('../services/fireCheck')
 
 const {
     ensureAuthenticated,
@@ -40,7 +41,7 @@ router.get('/intro', ensureAuthenticated ,(req, res) => {
 router.get('/work', ensureAuthenticated, async (req, res) => {
     // generate random number between 1 and 4 
     // const randomNumber = Math.floor(Math.random() * 4) + 1;
-    const randomNumber = 2;
+    const randomNumber = 1
     // render the corresponding page
     switch(randomNumber)  {
         case 1:
@@ -143,17 +144,39 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
         reputation: repo,
     })
     newActivity.save()
-    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: -5, reputation: repo}}, (err, doc) => {
+    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: -5, reputation: repo}}, async (err, doc) => {
         if (err) {
             console.log(err)
         } else {
-            const money = doc.money
-            const energy = doc.energy
-            res.render('result', {
-                correct: correct,
-                activity:"quiz",
-                money, energy, increase
-            })
+            const energyC = await energyCheck(username)
+            const moneyC = await moneyCheck(username)
+            const repoC = await repoCheck(username)
+            if (energyC.ok && moneyC.ok && repoC.ok) {
+                console.log('You can work')
+                const money = doc.money
+                const energy = doc.energy
+                res.render('result', {
+                    correct: correct,
+                    activity:"quiz",
+                    money, energy, increase
+                })
+            } else {
+                var reason = ""
+                if(!energyC.ok) {
+                    reason = energyC.reason
+                }
+                else {
+                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                }
+                reset(username)
+                res.render('fired', {
+                    reason
+                })
+            }
+
+
+                
+            
         }
     })
     
