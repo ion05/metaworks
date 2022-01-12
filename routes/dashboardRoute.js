@@ -212,14 +212,33 @@ router.post('/sentence', ensureAuthenticated, (req,res)=> {
     })
     newActivity.save()
     var correct = csentence==sentence ? "All correct" : "Incorrect"
-    user.findOneAndUpdate({username:username}, {$inc: {money: increase, energy:-5, reputation:3}}).then(doc => {
-        const money = doc.money
-        const energy = doc.energy
-        res.render('result', {
-            correct: correct,
-            activity:"sentence",
-            money, energy, increase
+    user.findOneAndUpdate({username:username}, {$inc: {money: increase, energy:-5, reputation:3}}).then(async doc => {
+        const energyC = await energyCheck(username)
+            const moneyC = await moneyCheck(username)
+            const repoC = await repoCheck(username)
+            if (energyC.ok && moneyC.ok && repoC.ok) {
+                const money = doc.money
+                const energy = doc.energy
+                res.render('result', {
+                correct: correct,
+                activity:"sentence",
+                money, energy, increase
         })
+            } else {
+                var reason = ""
+                if(!energyC.ok) {
+                    reason = energyC.reason
+                }
+                else {
+                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                }
+                reset(username)
+                res.render('fired', {
+                    reason
+                })
+            }
+
+        
     })
 })
 
