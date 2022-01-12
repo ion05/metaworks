@@ -23,9 +23,7 @@
     </div>
     <div class="user-stats-div">
         <div class="money">
-            <span class="material-icons-outlined">
-                attach_money
-            </span>
+            $
             <%= user.money %>
         </div>
         <div class="energy">
@@ -38,10 +36,13 @@
             <span class="material-icons-outlined">
                 star
             </span>
-            <% if(user.reputation < 10){ %> 
-                0<%= user.reputation %>
-            <% }else{ %>
-                <%= user.reputation %>
+            <%= user.reputation %>
+            <% if(user.reputation > 0 && user.reputation < 5) {%>
+                <p>Hustle! Do tasks to get more points</p>
+            <% }else if (user.reputation >5 && user.repuation < 8){ %>
+                <p>Whoo! Nice Work Bud.</p>
+            <%} else {%>
+                <p> You're killing it. </p>
             <%}%>
         </div>
     </div>

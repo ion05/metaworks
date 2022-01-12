@@ -9,3 +9,9 @@ document.querySelector('.line-div-1').addEventListener('click',()=>{
     document.querySelector('.line-div').style.display = 'block'
 })
 
+document.querySelector('.suit').addEventListener('click',()=>{
+    location.href='/dashboard/work'
+})
+document.querySelector('.rest').addEventListener('click',()=>{
+    location.href='/dashboard/rest'
+})

@@ -46,10 +46,7 @@
                     <%= energy_per %>%
                 </div>
                 <div class="money">
-                    <span class="material-icons-outlined">
-                        attach_money
-                    </span>
-                    <%= user.money %>
+                    $ <%= user.money %>
                 </div>
             </div>
         </div>
@@ -92,6 +89,7 @@
     <div class="curr-div">
         <div class="curr-line"></div>
         <h2>Recent Activity</h2>
+        <% if(activity_list.length >0){ %>
         <ul class="timeline-list">
                 <% for( let index = 0; index < activity_list.length; index++ ) { %>
                     <h4>
@@ -135,6 +133,9 @@
                         <% } %>
                     </li>
                 <%}%>
+            <%} else {%>
+                <h5>No Activity :(</h5>
+            <%}%>
         </ul>
     </div>
     <div class="job-stats">
@@ -143,20 +144,10 @@
         <div class="rate">
             <span class="material-icons-outlined">
                 star
-            </span>
-            <% if(user.reputation < 10){ %> 
-                0<%= user.reputation %>
-            <% }else{ %>
+            </span> 
                 <%= user.reputation %>
-            <%}%>
             <br>
-            <% if(user.reputation > 0 && user.reputation < 5) {%>
-                <p>Hustle! Do tasks to get more points</p>
-            <% }else if (user.reputation >5 && user.repuation < 8){ %>
-                <p>Whoo! Nice Work Bud.</p>
-            <%} else {%>
-                <p> You're killing it. </p>
-            <%}%>
+            
         </div>
         <div class="graph-div">
             <div class="l"></div>
