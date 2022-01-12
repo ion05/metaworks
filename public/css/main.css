@@ -938,3 +938,38 @@ body{
     border: none;
     opacity: 0.9;
 }
+.result-div{
+    height: 100vw;
+    background: #121E2A;
+}
+.result-div h2{
+    color: #eee;
+    font-size: 3.5vw;
+    letter-spacing: 1px;
+    position: absolute;
+    margin-top: 2.5vw;
+    margin-left: 5vw;
+}
+.res-span{
+    position: absolute;
+    margin-left: 7.5vw;
+    margin-top: 7.5vw;
+    font-size: 2vw;
+    color: #eee;
+}
+.result-div a{
+    width: 20vw;
+    height: 3.5vw;
+    font-size: 2vw;
+    color: #eee;
+    background: #33A9FE;
+    border-radius: 2vw;
+    border:none;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 5vw;
+    margin-top: 25vw;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 0.5vw;
+}
