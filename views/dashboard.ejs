@@ -94,13 +94,13 @@
         <h2>Recent Activity</h2>
         <ul class="timeline-list">
                 <% for( let index = 0; index < activity_list.length; index++ ) { %>
-                     <li><% if (activity_list[index].money) { %>
+                    <h4>
+                        <%= activity_list[index].name %>
+                    </h4> 
+                    <li><% if (activity_list[index].money) { %>
                         <span class="material-icons-outlined" id="m">
                             monetization_on
                         </span>
-                        <h4>
-                            <%= activity_list[index].name %>
-                        </h4>
                         <p>
                             Current Balance: <%= activity_list[index].money + user.money %>
                         </p>
@@ -108,7 +108,7 @@
                             <!-- +<span class="material-icons-outlined">
                                 attach_money
                             </span> -->
-                            +<%=activity_list[index].money%>
+                            <%if(activity_list[index].money > 0) {%>+<%=activity_list[index].money%>$<%}else{%><%=activity_list[index].money%>$<%}%>
                         </div>
                     <%}%></li>
                     <li>
@@ -116,10 +116,6 @@
                             <span class="material-icons-outlined" id="o">
                                 offline_bolt
                             </span>
-            
-                            <h4>
-                                <%=activity_list[index].name%>
-                            </h4>
                             <p>
                                 Current Energy: <%=  Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) + energy_per %>%
                             </p>
@@ -133,10 +129,6 @@
                             <span class="material-icons-outlined" id="c">
                                 circle_notifications
                             </span>
-            
-                            <h4>
-                                <%=activity_list[index].name%>
-                            </h4>
                             <p>
                                 Rewarded <%= activity_list[index].reputation %> points
                             </p>

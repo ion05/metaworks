@@ -632,16 +632,20 @@ body{
     font-size: 2.5vw;
     position: absolute;
 }
+.timeline-list h4{
+    font-size: 2.5vw;
+    margin-bottom: 2vw;
+}
 .timeline-list li{
     margin-bottom: 2.5vw;
-}
-.timeline-list li h4,.timeline-list li p{
+    padding-left: 2vw;
+}.timeline-list li p{
     margin-left: 4vw;
     margin-top: 0.5vw;
 }
 .note-o,.note-s{
     margin-left: 27.5vw;
-    margin-top: -5vw;
+    margin-top: -1.75vw;
     position: absolute;
     font-size: 1.5vw;
 }
