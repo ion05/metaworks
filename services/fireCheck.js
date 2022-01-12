@@ -49,5 +49,12 @@ const repoCheck = async (username) => {
     }
 }
 
+const reset = async (username) => {
+    user.findOneAndUpdate({username:username}, {$set: {money: 1000, energy: 30, maxEnergy:30, reputation:2}}).then((doc)=> {
+        console.log(doc)
+        console.log('Progress reset')
+    })
+}
 
-module.exports = {energyCheck, moneyCheck, repoCheck}
+
+module.exports = {energyCheck, moneyCheck, repoCheck, reset}

@@ -5,7 +5,7 @@ const question = require('../models/questionSchema')
 const user = require('../models/userSchema')
 const activity = require('../models/activitySchema')
 const randomsentence = require('random-sentence')
-const {energyCheck, moneyCheck, repoCheck} = require('../services/fireCheck')
+const {energyCheck, moneyCheck, repoCheck, reset} = require('../services/fireCheck')
 
 const {
     ensureAuthenticated,
@@ -168,6 +168,7 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
                 else {
                     reason = moneyC.ok ? moneyC.reason : repoC.reason
                 }
+                reset(username)
                 res.render('fired', {
                     reason
                 })
