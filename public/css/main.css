@@ -986,3 +986,48 @@ body{
 .suit{
     cursor: pointer;
 }
+.modal,.modal-1{
+    display: none;
+    width: 35vw;
+    height: 15vw;
+    background-color: #172231;
+    position: absolute;
+    margin-top: 20vw;
+    padding: 10px;
+    border-radius: 1vw;
+    margin-left: 32.5vw;
+
+}
+.complain,.repo{
+    cursor: pointer;
+}
+.modal-div{
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0  ,0.5);
+    height: 100vh;
+    margin-top:-55vw;
+    display: none;
+}
+@keyframes modal-animation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.close,.close-1{
+    width: 2.5vw;
+    height: 2.5vw;
+    font-size: 1.25vw;
+    margin-left: 30vw;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #eee;
+    transition: all 0.5s ease;
+}
+.close:hover,.close-1:hover{
+    font-size: 1.5vw;
+}
