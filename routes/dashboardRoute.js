@@ -123,6 +123,7 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
     const username = req.user.username
     var increase = 0
     var repo = 0
+    var energy = -5
     if (correct >3) {
         increase = 400
         repo = 2
@@ -136,15 +137,28 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
         increase = -100
         repo = -1
     }
+    const power = req.cookies.power
+    switch(power) {
+        case 'energy':
+            energy = -2.5
+            break
+        case 'repo':
+            repo *= 2
+            break
+        case "money":
+            increase *= 2
+            break
+    }
+
     const newActivity = new activity({
         name: "Quiz",
         username: username,
         money: increase,
-        energy: -5,
+        energy: energy,
         reputation: repo,
     })
     newActivity.save()
-    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: -5, reputation: repo}}, async (err, doc) => {
+    user.findOneAndUpdate({username: username}, {$inc: {money: increase, energy: energy, reputation: repo}}, async (err, doc) => {
         if (err) {
             console.log(err)
         } else {
@@ -181,27 +195,33 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
     })
     
 })
-router.get('/market',ensureAuthenticated, (req, res) => {
-    const energy= req.user.energy 
-    const maxenergy = req.user.maxEnergy
-    const energy_per = Math.round((energy/maxenergy)*100)
-    res.render('market',{
-        user: req.user,
-        energy_per
-    })
-})
+
 router.post('/sentence', ensureAuthenticated, (req,res)=> {
     const csentence = req.cookies.sentence
     const sentence = req.body.sentence
     res.clearCookie('sentence')
     const username = req.user.username
     var repo =0
+    var energy = -5
+    var increase = 0
     if (sentence == csentence) {
-        var increase = 200
+        increase = 200
         repo = 3
     } else {
         increase = -100
         repo = -2
+    }
+    const power = req.cookies.power
+    switch(power) {
+        case 'energy':
+            energy = -2.5
+            break
+        case 'repo':
+            repo *= 2
+            break
+        case "money":
+            increase *= 2
+            break
     }
     const newActivity = new activity({
         name: "Sentence",
@@ -212,7 +232,7 @@ router.post('/sentence', ensureAuthenticated, (req,res)=> {
     })
     newActivity.save()
     var correct = csentence==sentence ? "All correct" : "Incorrect"
-    user.findOneAndUpdate({username:username}, {$inc: {money: increase, energy:-5, reputation:3}}).then(async doc => {
+    user.findOneAndUpdate({username:username}, {$inc: {money: increase, energy: energy, reputation:repo}}).then(async doc => {
         const energyC = await energyCheck(username)
             const moneyC = await moneyCheck(username)
             const repoC = await repoCheck(username)

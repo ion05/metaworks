@@ -1,5 +1,5 @@
 <style>
-    html{
+    html {
         overflow-y: hidden
     }
 </style>
@@ -7,7 +7,7 @@
     <h1>Metaworks</h1>
     <div class="user-blob">
         <span class="prof">
-            <a href='' >Profile</a>
+            <a href=''>Profile</a>
         </span>
         <div class="line"></div>
         <span>
@@ -19,7 +19,17 @@
             local_grocery_store
         </span>
         <h2>Shop<span>.</span> </h2>
+        <!-- <form action="/dashboard/market/money" method="post">
+            <button type="submit">Buy</button>
+        </form> -->
+        <!-- <form action="/dashboard/market/energy" method="post">
+            <button type="submit">Buy</button>
+        </form> -->
+        <form action="/dashboard/market/repo" method="post">
+            <button type="submit">Buy</button>
+        </form>
         <p>Purchase and experience new powerups</p>
+
     </div>
     <div class="user-stats-div">
         <div class="money">
@@ -38,11 +48,11 @@
             </span>
             <%= user.reputation %>
             <% if(user.reputation > 0 && user.reputation < 5) {%>
-                <p>Hustle! Do tasks to get more points</p>
+            <p>Hustle! Do tasks to get more points</p>
             <% }else if (user.reputation >5 && user.repuation < 8){ %>
-                <p>Whoo! Nice Work Bud.</p>
+            <p>Whoo! Nice Work Bud.</p>
             <%} else {%>
-                <p> You're killing it. </p>
+            <p> You're killing it. </p>
             <%}%>
         </div>
     </div>
