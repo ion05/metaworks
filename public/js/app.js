@@ -15,3 +15,23 @@ document.querySelector('.suit').addEventListener('click',()=>{
 document.querySelector('.rest').addEventListener('click',()=>{
     location.href='/dashboard/rest'
 })
+document.querySelector('.complain').addEventListener('click',()=>{
+    document.querySelector('.modal').style.display = 'block'
+    document.querySelector('.modal-div').style.display = 'block'
+})
+document.querySelector('.repo').addEventListener('click',()=>{
+    document.querySelector('.modal-1').style.display = 'block'
+    document.querySelector('.modal-div').style.display = 'block'
+    document.querySelector('.modal-div').style.animation = 'modal-animation 1s ease'
+
+})
+document.querySelector('.close').addEventListener('click',()=>{
+    document.querySelector('.modal').style.display = 'none'
+    document.querySelector('.modal-div').style.display = 'none'
+})
+document.querySelector('.close-1').addEventListener('click',()=>{
+    document.querySelector('.modal-1').style.display = 'none'
+    document.querySelector('.modal-div').style.display = 'none'
+
+})
+
