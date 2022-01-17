@@ -41,10 +41,12 @@ const indexRoute = require('./routes/indexRoute');
 const dashboardRoute = require('./routes/dashboardRoute');
 const authRoute = require('./routes/authRoute');
 const marketRoute = require('./routes/marketRoute');
+const leaderboardRoute = require('./routes/leaderboardRoute');
 
 app.use(indexRoute)
 app.use('/dashboard',dashboardRoute)
 app.use(authRoute)
 app.use('/dashboard/market',marketRoute)
+app.use('/leaderboard', leaderboardRoute)
 
 
