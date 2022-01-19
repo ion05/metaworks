@@ -16,7 +16,8 @@ router.get('/',ensureAuthenticated, (req, res) => {
     const energy_per = Math.round((energy/maxenergy)*100)
     res.render('market',{   
         user: req.user,
-        energy_per
+        energy_per,
+        power:req.cookies.power
     })
 })
 router.post('/money', ensureAuthenticated, async (req,res)=> {

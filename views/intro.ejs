@@ -1,5 +1,78 @@
-<h1>Hello Welcome</h1>
-<h2>How to Play Game</h2>
-<form action="/dashboard">
-    <button type="submit">Skip Intro</button>
-</form>
+<div class="intro-div">
+    <h2 class="wellcome"></h2>
+</div>
+<script>
+    let _ = document.querySelector.bind(document);
+let _all = document.querySelectorAll.bind(document);
+
+var typeWriter = function(e, t) {
+  _(e).textContent = "";
+  var text = t.split("");
+  var count = 0;
+  var symbol = "_";
+  var time;
+  var type = function(){
+    if(count < text.length){
+      _(e).textContent = _(e).textContent.replace(symbol, '') + text[count];
+      if((count + 1) < text.length) _(e).textContent = _(e).textContent + symbol;
+      count++;
+    }else{
+      clearInterval(time);
+    }
+  }
+  time = setInterval(type, 50);
+};
+
+var fadeIn = function(el, t) {
+  _(el).classList.remove("in");
+  _(el).classList.add("out");
+  setTimeout(function(){
+    _(el).classList.remove("out");
+    _(el).classList.add("in");
+    typeWriter(el, t); 
+  },1000);
+}
+setTimeout(function(){      
+  var timer = 2500;
+  setTimeout(function(){
+    fadeIn('.wellcome',"Hi there!");
+    _(".pre-load").classList.add("loaded"); 
+  }, timer);
+  setTimeout(function(){
+    fadeIn('.wellcome',"Welcome to");
+  }, timer*2);
+  setTimeout(function(){
+    fadeIn('.wellcome',"Metaworks");
+  }, timer*3);
+  setTimeout(function(){
+    fadeIn('.wellcome', "Hope you enjoy!"); 
+    _(".scroll").classList.add("in"); 
+  }, timer*4);
+}, 1000);
+setTimeout(()=>{
+    var button = document.createElement('button')
+    button.innerHTML='How to play?'
+    document.querySelector('.intro-div').append(button)
+    button.classList.add('button-intro')
+    button.addEventListener('click',()=>{
+        document.querySelector('.wellcome').style.display='none';
+        var div = document.createElement('div')
+        div.classList.add('instruct-div')
+        div.innerHTML=`
+        <h2>How to Play Game</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing <br>
+            elit. Molestias voluptas enim soluta laudantium totam,<br>
+            molestiae sit, laboriosam quisquam, eaque provident natus<br>
+            consectetur explicabo amet laborum omnis nobis ipsum quasi saepe.
+        </p> 
+        <form action="/dashboard">
+            <button type="submit">Skip Intro</button>
+        </form>
+        `;
+        document.querySelector('.intro-div').append(div)
+        button.style.display='none';
+        div.style.display='block'
+    })
+},14000)
+</script>
