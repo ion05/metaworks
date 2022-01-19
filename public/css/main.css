@@ -331,16 +331,16 @@ body{
 .error-div{
     color: red;
 }
-.dashboard-div,.market-div{
+.dashboard-div,.market-div,.leaderboard-div{
     background: #121E2A;
     height: 100vh;
 }
-.dashboard-div h1,.market-div h1{
+.dashboard-div h1,.market-div h1,.leaderboard-div h1{
     font-size: 10vw;
     color: #172231;
     letter-spacing: 1px;
     position: absolute;
-    margin-top: 46.5vw;
+    margin-top: 82.5vh;
     text-align: center;
 }
 .nav-dash{
@@ -1029,5 +1029,160 @@ body{
     transition: all 0.5s ease;
 }
 .close:hover,.close-1:hover{
+    font-size: 1.5vw;
+}
+.leaderboard-content{
+    position: absolute;
+    margin-top: 5vw;
+    margin-left: 35vw;
+    color: #eee;
+    font-size: 2vw;
+}
+.leaderboard-content h2{
+    margin-left: 3.5vw;
+}
+.leaderboard-content h2 span{
+    color: #FAC762;
+}
+.leaderboard-content p{
+    font-size: 1.5vw;
+    margin-left: 3.5vw;
+}
+.leaderboard-content .material-icons-outlined{
+    color: #FAC762;
+    position: absolute;
+    margin-top: .75vw;
+}
+.user-rank{
+    background-color: #1F2E43;
+    color: #eee;
+    width: 20vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    border-radius: 1vw;
+    position: absolute;
+    margin-top: 4.5vw;
+    margin-left: 3.5vw;
+}
+.user-rank h3{
+    color: #FAC762;
+}
+.user-rank p{
+    position: absolute;
+    margin-top: -1.7vw;
+    margin-left: 7vw;
+    font-size: 1.5vw;
+}
+.rank{
+    background: rgba(23, 51, 75, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border-radius: 1.2vw;
+    text-align: center;
+}
+#rank0{
+    position: absolute;
+    margin-top: 20vw;
+    margin-left: 38.5vw;
+    height: 25vw;
+    width: 22.5vw;
+}
+#rank1{
+    height: 20vw;
+    width: 22.5vw;
+    position: absolute;
+    margin-top: 25vw;
+    margin-left: 10vw;
+}
+#rank2{
+    height: 18.5vw;
+    width: 22.5vw;
+    position: absolute;
+    margin-top: 26.5vw;
+    margin-left: 67vw;
+}
+.rank-div h2:nth-child(1){
+    font-size: 5vw;
+    position: absolute;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #33A9FE;
+    text-align: center;
+    margin-top: 16vw;
+}
+.rank-div h2:nth-child(2){
+    font-size: 5vw;
+    position: absolute;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #FAC762;
+    margin-left: 12.5vw;
+    margin-top: 21vw;
+}
+.rank-div h2:nth-child(3){
+    font-size: 5vw;
+    position: absolute;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #35DF91;
+    margin-left: 72.5vw;
+    margin-top: 22.5vw;
+}
+
+#rank0 .material-icons-outlined{
+    font-size: 12.5vw;
+    color: #eee;
+}
+#rank1 .material-icons-outlined{
+    font-size: 10vw;
+    color: #eee;
+}
+#rank2 .material-icons-outlined{
+    font-size: 7.5vw;
+    color: #eee;
+}
+#rank0 button{
+    width: 20vw;
+    height: 3vw;
+    font-family: 'sofia pro', sans-serif;
+    font-size: 1.5vw;
+    border-radius: .5vw;
+    background: #1f2e43a1;
+    color: #eee;
+    border:none;
+    margin-top: 5vw;
+    cursor: pointer;
+}
+#rank1 button{
+    width: 20vw;
+    height: 3vw;
+    font-family: 'sofia pro', sans-serif;
+    font-size: 1.5vw;
+    border-radius: .5vw;
+    background: #1f2e43a1;
+    color: #eee;
+    border:none;
+    cursor: pointer;
+    margin-top: 2vw;
+}
+#rank2 button{
+    width: 20vw;
+    height: 3vw;
+    font-family: 'sofia pro', sans-serif;
+    font-size: 1.5vw;
+    border-radius: .5vw;
+    background: #1f2e43a1;
+    color: #eee;
+    border:none;
+    cursor: pointer;
+    margin-top: 3vw;
+}
+.rank h3{
+    color: #eee;
+    letter-spacing: 1px;
     font-size: 1.5vw;
 }
