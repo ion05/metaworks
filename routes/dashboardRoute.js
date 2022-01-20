@@ -513,7 +513,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                     const level = doc.level
                     var newLevel = ""
                     switch (level) {
-                        case "Amateur":
+                        case "Trainee":
                             newLevel = "Trained"
                             break
                         case "Trained":
