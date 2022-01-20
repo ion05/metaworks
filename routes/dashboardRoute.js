@@ -422,5 +422,168 @@ switch (type) {
 
 }
 })
+router.post('/request', ensureAuthenticated, (req,res)=> {
+    const username = req.user.username
+    const request = req.body.request
+    const type = req.body.type 
+    switch (type) {
+        case 1:
+            const repoo = req.user.reputation
+            if (repoo % 5 == 0 ) {
+                var money = 200
+                var energy = 0 
+                var repo = -2 
+                const newActivity = new activity({
+                    username: username,
+                    name: "Request",
+                    money: money,
+                    energy: energy,
+                    reputation: repo,
+                })
+                newActivity.save()
+                User.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                    const repoC = await repoCheck(username)
+                    if (repoC.ok) {
+                        res.render('result', {
+                            correct: "Request Successfull",
+                            activity: "Pay Raise Request",
+                            money: doc.money,
+                            energy: doc.energy,
+                            increase: 200
+                        })
+                    } else {
+                        var reason = repoC.reason
+                        reset(username)
+                        res.render('fired', {
+                            reason
+                        })
+                    }
+                    
+                }
+                )
+            } else {
+                const money = 0
+                const energy = -2
+                const repo = -5  
+                const newActivity = new activity({
+                    username: username,
+                    name: "Request",
+                    money: money,
+                    energy: energy,
+                    reputation: repo,
+                })
+                newActivity.save()
+                User.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                    const repoC = await repoCheck(username)
+                    const energyC = await energyCheck(username)
+                    if (repoC.ok && energyC.ok) {
+                        res.render('result', {
+                            correct: "Request Unscessfull",
+                            activity: "Pay Raise Request",
+                            money: doc.money,
+                            energy: doc.energy,
+                            increase: -200
+                        })
+                    }
+                    else {
+                        var reason = energyC.ok ? energyC.reason : repoC.reason
+                        reset(username)
+                        res.render('fired', {
+                            reason
+                        })
+                    }
+                })
+            }
+            break
+        case 2:
+            const repooo = req.user.reputation
+            if (repooo % 10 == 0 ) {
+                var money =  400
+                var energy = 0 
+                var repo = 2
+                const newActivity = new activity({
+                    username: username,
+                    name: "Request",
+                    money: money,
+                    energy: energy,
+                    reputation: repo,
+                })
+                newActivity.save()
+                User.findOne({username: username}).then(async doc => {
+                    const level = doc.level
+                    var newLevel = ""
+                    switch (level) {
+                        case "Amateur":
+                            newLevel = "Trained"
+                            break
+                        case "Trained":
+                            newLevel = "Professional"
+                            break
+                        case "Professional":
+                            newLevel = "Expert"
+                            break
+                        case "Expert":
+                            newLevel = "Elite"
+                            break
+                        case "Elite":
+                            newLevel = "CEO"
+                            break
+                        case "CEO":
+                            res.render('result', {
+                                correct: "At Top of Company",
+                                activity: "Promotion Request",
+                                money: doc.money,
+                                energy: doc.energy,
+                                increase: 0
+                                })
+                            break
+                    }
+                    User.findOneAndUpdate({username: username}, {$set: {level: newLevel}, $inc: {money:money, energy:energy , reputation:repo}}).then(doc => {
+                        res.render('result', {
+                            correct: "Request Successfull",
+                            activity: "Promotion Request",
+                            money: doc.money,
+                            energy: doc.energy,
+                            increase: 400
+                        })
+                    })
+                })
+            } else {
+                const money = 0
+                const energy = -2
+                const repo = -5  
+                const newActivity = new activity({
+                    username: username,
+                    name: "Request",
+                    money: money,
+                    energy: energy,
+                    reputation: repo,
+                })
+                newActivity.save()
+                User.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                    const repoC = await repoCheck(username)
+                    const energyC = await energyCheck(username)
+                    if (repoC.ok && energyC.ok) {
+                        res.render('result', {
+                            correct: "Request Unscessfull",
+                            activity: "Promotion Request",
+                            money: doc.money,
+                            energy: doc.energy,
+                            increase: -400
+                        })
+                    }
+                    else {
+                        var reason = energyC.ok ? energyC.reason : repoC.reason
+                        reset(username)
+                        res.render('fired', {
+                            reason
+                        })
+                    }
+                })
+            }
+                
 
+    } 
+
+})
 module.exports =  router;

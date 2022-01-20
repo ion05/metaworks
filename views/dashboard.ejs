@@ -208,9 +208,16 @@
     </div>
     <div class="modal-1">
         <button class="close-1">
-            <span class="material-icons-outlined">
-                close
-            </span>
+            <form action="/dashboard/requst" method="post">
+                <input type="text" name="request" placeholder="Enter your request here">
+                <select name="type">
+                    <option value="1">Pay Raise</option>
+                    <option value="2">Promotion</option>
+                </select>
+                <button type="submit">Submit</button>
+                <span class="material-icons-outlined">
+                    close
+                </span>
         </button>
     </div>
 </div>
