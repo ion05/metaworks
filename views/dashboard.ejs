@@ -1,21 +1,24 @@
 <style>
-    html{
+    html {
         overflow-y: hidden;
     }
+
     ::-webkit-scrollbar-track {
-    background-color: transparent;
+        background-color: transparent;
     }
+
     ::-webkit-scrollbar {
         width: 8px !important;
         background-color: #F5F5F5;
     }
+
     ::-webkit-scrollbar-thumb {
         background-color: transparent;
     }
+
     .material-icons-outlined {
         font-family: 'Material Icons';
     }
-  
 </style>
 <div class="dashboard-div">
     <div class="hello-div">
@@ -91,50 +94,51 @@
         <h2>Recent Activity</h2>
         <% if(activity_list.length >0){ %>
         <ul class="timeline-list">
-                <% for( let index = 0; index < activity_list.length; index++ ) { %>
-                    <h4>
-                        <%= activity_list[index].name %>
-                    </h4> 
-                    <li><% if (activity_list[index].money) { %>
-                        <span class="material-icons-outlined" id="m">
-                            monetization_on
-                        </span>
-                        <p>
-                            Current Balance: <%= activity_list[index].money + user.money %>
-                        </p>
-                        <div class="note-s">
-                            <!-- +<span class="material-icons-outlined">
+            <% for( let index = 0; index < activity_list.length; index++ ) { %>
+            <h4>
+                <%= activity_list[index].name %>
+            </h4>
+            <li><% if (activity_list[index].money) { %>
+                <span class="material-icons-outlined" id="m">
+                    monetization_on
+                </span>
+                <p>
+                    Current Balance: <%= activity_list[index].money + user.money %>
+                </p>
+                <div class="note-s">
+                    <!-- +<span class="material-icons-outlined">
                                 attach_money
                             </span> -->
-                            <%if(activity_list[index].money > 0) {%>+<%=activity_list[index].money%>$<%}else{%><%=activity_list[index].money%>$<%}%>
+                    <%if(activity_list[index].money > 0) {%>+<%=activity_list[index].money%>$<%}else{%><%=activity_list[index].money%>$<%}%>
                         </div>
-                    <%}%></li>
-                    <li>
-                        <% if(activity_list[index].energy) { %>
-                            <span class="material-icons-outlined" id="o">
-                                offline_bolt
-                            </span>
-                            <p>
-                                Current Energy: <%=  Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) + energy_per %>%
-                            </p>
-                            <div class="note-o">
-                                <%= Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) %>%
-                            </div>
-                        <% } %>
-                    </li>
-                    <li>
-                        <% if(activity_list[index].reputation) { %>
-                            <span class="material-icons-outlined" id="c">
-                                circle_notifications
-                            </span>
-                            <p>
-                                Rewarded <%= activity_list[index].reputation %> points
-                            </p>
-                        <% } %>
-                    </li>
-                <%}%>
+                    <%}%>
+            </li>
+            <li>
+                <% if(activity_list[index].energy) { %>
+                <span class="material-icons-outlined" id="o">
+                    offline_bolt
+                </span>
+                <p>
+                    Current Energy: <%=  Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) + energy_per %>%
+                </p>
+                <div class="note-o">
+                    <%= Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) %>%
+                </div>
+                <% } %>
+            </li>
+            <li>
+                <% if(activity_list[index].reputation) { %>
+                <span class="material-icons-outlined" id="c">
+                    circle_notifications
+                </span>
+                <p>
+                    Rewarded <%= activity_list[index].reputation %> points
+                </p>
+                <% } %>
+            </li>
+            <%}%>
             <%} else {%>
-                <h5>No Activity :(</h5>
+            <h5>No Activity :(</h5>
             <%}%>
         </ul>
     </div>
@@ -147,46 +151,55 @@
             </span> 
                 <%= user.reputation %>
             <br>
-            
-        </div>
-        <div class="graph-div">
-            <div class="l"></div>
-            <h3>
-                Work Hours <span>coming soon</span>
-            </h3>
 
-        </div>
     </div>
-    <div class="nav-dash">
-        <ul class="nav-dash-ul">
-            <li><a href="/dashboard/market" id="a-1">Market</a></li>
-            <li><a href="/dashboard" id="a-2" >Dashboard</a></li>
-            <li><a href="/leaderboard" id="a-3">Leaderboard</a></li>
-        </ul>
+    <div class="graph-div">
+        <div class="l"></div>
+        <h3>
+            Work Hours <span>coming soon</span>
+        </h3>
+
     </div>
-    <div class="log-dash-i"></div>
-    <div class="user-blob">
-        <span class="prof">
-            <a href='' >Profile</a>
-        </span>
-        <div class="line"></div>
-        <span>
-            <a href="/logout" class="logout">Logout</a>
-        </span>
+</div>
+<div class="nav-dash">
+    <ul class="nav-dash-ul">
+        <li><a href="/dashboard/market" id="a-1">Market</a></li>
+        <li><a href="/dashboard" id="a-2">Dashboard</a></li>
+        <li><a href="/leaderboard" id="a-3">Leaderboard</a></li>
+    </ul>
+</div>
+<div class="log-dash-i"></div>
+<div class="user-blob">
+    <span class="prof">
+        <a href=''>Profile</a>
+    </span>
+    <div class="line"></div>
+    <span>
+        <a href="/logout" class="logout">Logout</a>
+    </span>
+</div>
+<div class="user-prof-icon">
+    <div class="line-div">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
     </div>
-    <div class="user-prof-icon">
-        <div class="line-div">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-        </div>
-        <div class="line-div-1">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-        </div>
+    <div class="line-div-1">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
     </div>
+</div>
 </div>
 <div class="modal-div">
     <div class="modal">
+        <form action="/dashboard/complain" method="post">
+            <input type="text" name="complaint" placeholder="Enter your complain here">
+            <!-- dropdwon list -->
+            <select name="type">
+                <option value="1">Working Conditions</option>
+                <option value="2">Work Load</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
         <button class="close">
             <span class="material-icons-outlined">
                 close

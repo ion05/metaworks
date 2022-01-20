@@ -278,4 +278,149 @@ router.get('/rest', ensureAuthenticated, (req,res)=> {
         res.redirect('/dashboard')
     })
 })
+
+router.post('/complain', ensureAuthenticated,  (req,res)=> {
+const complaint = req.body.complaint
+const type = req.body.type
+switch (type) {
+    case 1:
+        var userr = req.user
+        if (user.repo % 10 == 0) {
+            const money = 0 
+            const energy = 5
+            const repo = 5 
+            const newActivity = new activity({
+                name: "Complain",
+                username: userr.username,
+                money: money,
+                energy: energy,
+                reputation: repo,
+            })
+            newActivity.save()
+            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
+                res.render('result', {
+                    correct: "Complaint Successfull",
+                    activity: "Working Conditions Complaint",
+                    money: doc.money,
+                    energy: doc.energy,
+                    increase: 0
+
+                    })
+                })
+
+        } else {
+            const money = -100
+            const energy = -5
+            const repo = -2
+            const newActivity = new activity({
+                name: "Complain",
+                username: userr.username,
+                money: money,
+                energy: energy,
+                reputation: repo,
+            })
+            newActivity.save()
+            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                const energyC = await energyCheck(username)
+            const moneyC = await moneyCheck(username)
+            const repoC = await repoCheck(username)
+            if (energyC.ok && moneyC.ok && repoC.ok) {
+                res.render('result', {
+                    correct: "Complaint Unscessfull",
+                    activity: "Working Conditions Complaint",
+                    money: doc.money,
+                    energy: doc.energy,
+                    increase: -100
+
+                    })
+                } else {
+                    var reason = ""
+                if(!energyC.ok) {
+                    reason = energyC.reason
+                }
+                else {
+                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                }
+                reset(username)
+                res.render('fired', {
+                    reason
+                })
+            }
+        })
+
+
+        }
+        break
+    case 2:
+        var userr = req.user
+        if (user.repo % 5 == 0) {
+            const money = 0 
+            const energy = 5
+            const repo = 5 
+            const newActivity = new activity({
+                name: "Complain",
+                username: userr.username,
+                money: money,
+                energy: energy,
+                reputation: repo,
+            })
+            newActivity.save()
+            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
+                res.render('result', {
+                    correct: "Complaint Successfull",
+                    activity: "Work Load Complaint",
+                    money: doc.money,
+                    energy: doc.energy,
+                    increase: 0
+
+                    })
+                })
+
+        } else {
+            const money = -100
+            const energy = -5
+            const repo = -2
+            const newActivity = new activity({
+                name: "Complain",
+                username: userr.username,
+                money: money,
+                energy: energy,
+                reputation: repo,
+            })
+            newActivity.save()
+            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc =>  {
+                const energyC = await energyCheck(username)
+            const moneyC = await moneyCheck(username)
+            const repoC = await repoCheck(username)
+            if (energyC.ok && moneyC.ok && repoC.ok) {
+                res.render('result', {
+                    correct: "Complaint Unscessfull",
+                    activity: "Work Load Complaint",
+                    money: doc.money,
+                    energy: doc.energy,
+                    increase: -100
+
+                    })
+                } else {
+                    var reason = ""
+                if(!energyC.ok) {
+                    reason = energyC.reason
+                }
+                else {
+                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                }
+                reset(username)
+                res.render('fired', {
+                    reason
+                })
+            }
+        })
+        }
+        break
+
+
+
+}
+})
+
 module.exports =  router;
