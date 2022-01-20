@@ -991,10 +991,10 @@ body{
 .modal,.modal-1{
     display: none;
     width: 35vw;
-    height: 15vw;
+    height: 20vw;
     background-color: #172231;
     position: absolute;
-    margin-top: 20vw;
+    margin-top: 15vw;
     padding: 10px;
     border-radius: 1vw;
     margin-left: 32.5vw;
@@ -1280,4 +1280,65 @@ body{
     border-radius: 10px;
     border:none;
     cursor: pointer;
+}
+.modal form,.modal-1 form{
+    position: absolute;
+    width: 25vw !important;
+    margin-left: 5vw;
+    margin-top: 1.5vw;
+}
+
+.modal form #complain,.modal-1 form #request{
+    background: transparent;
+    color: #eee;
+    border: none;
+    font-family: 'sofia pro', sans-serif;
+    height: 2vw;
+    font-size: 1.25vw;
+    border-bottom: 2px solid #eee;
+}
+.modal form #complain:focus{
+    outline: none;
+    border-bottom: 2px solid #F47960;
+    padding-bottom: 5px;
+}
+.modal-1 form #request:focus{
+    outline: none;
+    border-bottom: 2px solid #35DF91;
+    padding-bottom: 5px;
+}
+.modal form #complain::placeholder,.modal-1 form #request::placeholder{
+    color: #eee;
+}
+.modal form select,.modal-1 form select {
+    margin-top: 1.5vw;
+    padding: 5px;
+    font-family: 'sofia pro', sans-serif;
+    border: none;
+    background: #121E2A;
+    color: #eee;
+    font-size: 1.25vw;
+}
+.modal form select:focus ,.modal-1 form select:focus{
+    outline: none;
+}
+
+.modal form #submit,.modal-1 form #submit{
+    margin-top: 2.5vw;
+    font-family: 'spfia pro', sans-serif;
+    font-size: 1.25vw;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    background: #33A9FE;
+    color: #eee;
+    border-radius: 5px;
+    border:none;
+}
+.modal form #submit:focus{
+    outline: none;
+    cursor: pointer;
+}
+.modal form{
+    position: absolute;
+    width: 15vw;
 }

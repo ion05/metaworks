@@ -19,7 +19,7 @@
             <li><a href="/leaderboard" id="a-3">Leaderboard</a></li>
         </ul>
     </div>
-    <div class="user-blob">
+    <div class="user-blob" style="z-index: 5;">
         <span class="prof">
             <a href='' >Profile</a>
         </span>
@@ -68,3 +68,16 @@
            </script>
         <%}%>
     <% } %>
+    <script>
+        document.querySelector('.line-div').addEventListener('click',()=>{
+    document.querySelector('.user-blob').style.display = 'block'
+    document.querySelector('.line-div-1').style.display = 'block'
+    document.querySelector('.line-div').style.display = 'none'
+})
+document.querySelector('.line-div-1').addEventListener('click',()=>{
+    document.querySelector('.user-blob').style.display = 'none'
+    document.querySelector('.line-div-1').style.display = 'none'
+    document.querySelector('.line-div').style.display = 'block'
+})
+
+    </script>

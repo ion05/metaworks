@@ -18,6 +18,7 @@ document.querySelector('.rest').addEventListener('click',()=>{
 document.querySelector('.complain').addEventListener('click',()=>{
     document.querySelector('.modal').style.display = 'block'
     document.querySelector('.modal-div').style.display = 'block'
+    document.querySelector('.modal-div').style.animation = 'modal-animation 1s ease'
 })
 document.querySelector('.repo').addEventListener('click',()=>{
     document.querySelector('.modal-1').style.display = 'block'
