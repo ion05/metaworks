@@ -51,6 +51,7 @@
             Currently Using
         </h2>
     </div>
+    <%if (typeof power == 'undefined') {%>
     <div class="market-banner">
         <div class="circle">
             <span class="material-icons-outlined">
@@ -72,14 +73,43 @@
             </button>
         </div>
     </div>
+    <%} else{%>
     <div class="power-up-div">
         <form class="power-form" method="post">
             <button type="submit">Buy</button>
         </form>
-        <div class="powers">
-            <%=power%>
-        </div>
     </div>
+    <div class="powers">
+        <%if (power == 'energy'){%>
+            <div class="power-card">
+                <br>
+                <span class="material-icons-outlined">
+                    bolt
+                </span>
+                <br>
+                <h2><%=power%></h2>
+            </div>
+        <%} else if (power == 'money'){%>
+            <div class="power-card">
+                <br>
+                <span class="material-icons-outlined">
+                    monetization_on
+                </span>
+                <br>
+                <h2><%=power%></h2>
+            </div>
+        <%} else if (power == 'repo'){%>
+            <div class="power-card">
+                <br>
+                <span class="material-icons-outlined">
+                    star
+                </span>
+                <br>
+                <h2><%=power%></h2> 
+            </div>
+        <%}%>
+    </div>
+    <%}%>
     <div class="currency-shop-div"></div>
     <div class="nav-dash">
         <ul class="nav-dash-ul">

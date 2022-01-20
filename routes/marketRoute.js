@@ -14,10 +14,13 @@ router.get('/',ensureAuthenticated, (req, res) => {
     const energy= req.user.energy 
     const maxenergy = req.user.maxEnergy
     const energy_per = Math.round((energy/maxenergy)*100)
+    const power_list = req.cookies.power
+    const power_list_array = power_list.split(',')
+    console.log(power_list_array)
     res.render('market',{   
         user: req.user,
         energy_per,
-        power:req.cookies.power
+        power: power_list
     })
 })
 router.post('/money', ensureAuthenticated, async (req,res)=> {

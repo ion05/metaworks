@@ -517,6 +517,7 @@ body{
 .log-info h5{
     color: #35DF91;
     margin-top: 10px;
+    font-size: 1.25vw;
 }
 .button-div{
     padding-top: 1.5vw;
@@ -1341,4 +1342,27 @@ body{
 .modal form{
     position: absolute;
     width: 15vw;
+}
+.powers{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22.5vw;
+    margin-left: 7.5vw;
+    position: absolute;
+}
+.power-card{
+    width: 20vw;
+    height: 20vw;
+    background: #1F2E43;
+    border-radius: 10px;
+    margin-left: 2vw;
+    text-align: center;
+}
+.power-card span{
+    font-size: 7.5vw;
+    color: #eee;
+}
+.power-card h2{
+    padding-top: 3vw;
+    color: #eee;
 }

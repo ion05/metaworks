@@ -1,4 +1,33 @@
-<h2>You Purchased a new powerup</h2>
-<h3>Powerup: <%= power %> </h3>
-<h4>Expires: <%= expiry %> </h4>
-<h5>Cost: <%=cost%> </h5>
+<style>
+    .power-info{
+        background-color: #121E2A;
+        color: #eee;
+        height: 100vh;
+        padding: 10px;
+        text-align: center;
+    }
+    .power-info h2{
+        margin-top: 5vw;
+    }
+    .power-info h3,.power-info h4{
+        margin-top: 0.5vw;
+    }
+    .power-info a{
+        background-color: #33A9FE;
+        padding-left: 5vw;padding-right: 5vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #eee;
+    }
+</style>
+<div class="power-info">
+    <h2>You Purchased a new powerup</h2>
+    <h3>Powerup: <%= power %> </h3>
+    <h4>Expires: <%= expiry %> </h4>
+    <h4>Cost: <%=cost%> </h4>
+    <br>
+    <br>
+    <a href="/dashboard/market">Back</a>
+</div>
