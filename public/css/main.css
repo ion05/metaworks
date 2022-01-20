@@ -331,7 +331,7 @@ body{
 .error-div{
     color: red;
 }
-.dashboard-div,.market-div,.leaderboard-div{
+.dashboard-div,.market-div,.leaderboard-div,.intro-div{
     background: #121E2A;
     height: 100vh;
 }
@@ -539,6 +539,7 @@ body{
 }
 .rest{
     color: #eee;
+    cursor: pointer;
 }
 .repo{
     color: #eee;
@@ -589,6 +590,7 @@ body{
     font-size: 2vw;
     color: #33A9FE;
     margin-left: 1vw;
+   
 }
 .rate p {
     font-size: 1.2vw;
@@ -1185,4 +1187,97 @@ body{
     color: #eee;
     letter-spacing: 1px;
     font-size: 1.5vw;
+}
+.wellcome
+{
+  width: 750px;
+  height: 180px;
+  position: absolute;
+  top: calc(45% - 90px);
+  left: calc(43.5% - 300px);
+  text-align: center;
+  font-size: 6.5vw;
+  letter-spacing: 1px;
+  color: #eee;
+}
+.button-intro{
+    width: 15vw;
+    position: absolute;
+    animation: button 1s ease-in;
+    transition: all ease;
+    display: block;
+    left: 42.5%;
+    height: 3.5vw;
+    background-color: #33A9FE;
+    border-radius: 10px;
+    font-size: 1.25vw;
+    font-family: 'sofia pro',sans-serif;
+    margin-top: 35vw;
+    letter-spacing: 1px;
+    border:none;
+    color: #eee;
+    cursor:pointer;
+}
+.instruct-div form button{
+    width: 15vw;
+    position: absolute;
+    transition: all ease;
+    display: block;
+    left: 42.5%;
+    height: 3.5vw;
+    background-color: #33A9FE;
+    border-radius: 10px;
+    font-size: 1.25vw;
+    font-family: 'sofia pro',sans-serif;
+    letter-spacing: 1px;
+    border:none;
+    color: #eee;
+    margin-top: 5vw;
+    cursor:pointer;
+}
+.instruct-div{
+    margin-top: 15vw;
+    position: absolute;
+    height: 40vw;
+    color: #eee;
+    text-align: center;
+}
+.instruct-div h2{
+    font-size: 5vw;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.instruct-div p{
+    margin-top: 5vw;
+}
+@keyframes button {
+    from{
+        opacity: 0;
+        margin-top: 37.5vw;
+    }
+    to{
+        opacity: 1;
+        margin-top: 35vw;
+    }
+}
+.instruct-div{
+    display: none;
+}
+.power-up-div{
+    position: absolute;
+    width: 50vw;
+    margin-top: 15vw;
+    margin-left: 35vw;
+}
+.power-up-div button{
+    width: 15vw;
+    font-family: 'sofia pro', sans-serif;
+    height: 3vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    background-color: #172231;
+    color: #eee;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
 }
