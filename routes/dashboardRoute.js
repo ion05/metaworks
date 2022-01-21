@@ -204,7 +204,7 @@ router.post('/sentence', ensureAuthenticated, (req,res)=> {
     var repo =0
     var energy = -5
     var increase = 0
-    if (sentence.toLowerCase() == csentence.toLowerCase()) {
+    if (sentence == csentence) {
         increase = 200
         repo = 3
     } else {
@@ -283,7 +283,8 @@ router.post('/complain', ensureAuthenticated,  (req,res)=> {
 const complaint = req.body.complaint
 const type = req.body.type
 switch (type) {
-    case 1:
+    case "1":
+        console.log('hello')
         var userr = req.user
         if (userr.reputation % 10 == 0) {
             const money = 0 
@@ -297,7 +298,7 @@ switch (type) {
                 reputation: repo,
             })
             newActivity.save()
-            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
+            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
                 res.render('result', {
                     correct: "Complaint Successfull",
                     activity: "Working Conditions Complaint",
@@ -309,6 +310,7 @@ switch (type) {
                 })
 
         } else {
+            console.log('un')
             const money = -100
             const energy = -5
             const repo = -2
@@ -320,7 +322,9 @@ switch (type) {
                 reputation: repo,
             })
             newActivity.save()
-            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                console.log('updated')
+                var username = userr.username
                 const energyC = await energyCheck(username)
             const moneyC = await moneyCheck(username)
             const repoC = await repoCheck(username)
@@ -339,7 +343,7 @@ switch (type) {
                     reason = energyC.reason
                 }
                 else {
-                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                    reason = moneyC.ok ? repoC.reason : moneyC.reason
                 }
                 reset(username)
                 res.render('fired', {
@@ -351,7 +355,7 @@ switch (type) {
 
         }
         break
-    case 2:
+    case "2":
         var userr = req.user
         if (userr.reputation % 5 == 0) {
             const money = 0 
@@ -365,7 +369,7 @@ switch (type) {
                 reputation: repo,
             })
             newActivity.save()
-            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
+            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
                 res.render('result', {
                     correct: "Complaint Successfull",
                     activity: "Work Load Complaint",
@@ -388,7 +392,8 @@ switch (type) {
                 reputation: repo,
             })
             newActivity.save()
-            User.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc =>  {
+            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc =>  {
+                var username = userr.username
                 const energyC = await energyCheck(username)
             const moneyC = await moneyCheck(username)
             const repoC = await repoCheck(username)
@@ -423,11 +428,11 @@ switch (type) {
 }
 })
 router.post('/request', ensureAuthenticated, (req,res)=> {
-    const username = req.user.username
+    var username = req.user.username
     const request = req.body.request
     const type = req.body.type 
     switch (type) {
-        case 1:
+        case "1":
             const repoo = req.user.reputation
             if (repoo % 5 == 0 ) {
                 var money = 200
@@ -441,7 +446,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                     reputation: repo,
                 })
                 newActivity.save()
-                User.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                user.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
                     const repoC = await repoCheck(username)
                     if (repoC.ok) {
                         res.render('result', {
@@ -473,7 +478,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                     reputation: repo,
                 })
                 newActivity.save()
-                User.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                user.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
                     const repoC = await repoCheck(username)
                     const energyC = await energyCheck(username)
                     if (repoC.ok && energyC.ok) {
@@ -486,7 +491,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                         })
                     }
                     else {
-                        var reason = energyC.ok ? energyC.reason : repoC.reason
+                        var reason = energyC.ok ? repoC.reason : energyC.reason
                         reset(username)
                         res.render('fired', {
                             reason
@@ -495,9 +500,12 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                 })
             }
             break
-        case 2:
+        case "2":
+            username  = req.user.username
+            console.log(2)
             const repooo = req.user.reputation
             if (repooo % 10 == 0 ) {
+                console.log('approve')
                 var money =  400
                 var energy = 0 
                 var repo = 2
@@ -509,7 +517,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                     reputation: repo,
                 })
                 newActivity.save()
-                User.findOne({username: username}).then(async doc => {
+                user.findOne({username: username}).then(async doc => {
                     const level = doc.level
                     var newLevel = ""
                     switch (level) {
@@ -538,7 +546,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                                 })
                             break
                     }
-                    User.findOneAndUpdate({username: username}, {$set: {level: newLevel}, $inc: {money:money, energy:energy , reputation:repo}}).then(doc => {
+                    user.findOneAndUpdate({username: username}, {$set: {level: newLevel}, $inc: {money:money, energy:energy , reputation:repo}}).then(doc => {
                         res.render('result', {
                             correct: "Request Successfull",
                             activity: "Promotion Request",
@@ -549,9 +557,11 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                     })
                 })
             } else {
+                console.log('deny')
                 const money = 0
                 const energy = -2
                 const repo = -5  
+                console.log(username)
                 const newActivity = new activity({
                     username: username,
                     name: "Request",
@@ -560,7 +570,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                     reputation: repo,
                 })
                 newActivity.save()
-                User.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
+                user.findOneAndUpdate({username: username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(async doc => {
                     const repoC = await repoCheck(username)
                     const energyC = await energyCheck(username)
                     if (repoC.ok && energyC.ok) {
@@ -573,7 +583,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                         })
                     }
                     else {
-                        var reason = energyC.ok ? energyC.reason : repoC.reason
+                        var reason = energyC.ok ? repoC.reason : energyC.reason
                         reset(username)
                         res.render('fired', {
                             reason

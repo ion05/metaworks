@@ -84,7 +84,7 @@
                         star
                     </span>
                     <br>
-                    reputation
+                    request
                 </div>
             </div>
         </div>
@@ -211,14 +211,14 @@
                 close
             </span>
         </button>
-            <form action="/dashboard/request" method="post">
-                <input type="text" name="request" id="request" placeholder="Enter your request here">
-                <select name="type">
-                    <option value="1">Pay Raise</option>
-                    <option value="2">Promotion</option>
-                </select>
-                <input type="submit" value="Submit" id="submit">
-            </form>
+        <form action="/dashboard/request" method="post">
+            <input type="text" name="request" id="request" placeholder="Enter your request here">
+            <select name="type">
+                <option value="1">Pay Raise</option>
+                <option value="2">Promotion</option>
+            </select>
+            <input type="submit" value="Submit" id="submit">
+        </form>
     </div>
 </div>
 <script src="./js/app.js"></script>
