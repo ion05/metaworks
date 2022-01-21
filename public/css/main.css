@@ -526,7 +526,7 @@ body{
     display: flex;
     text-align: center;
     font-size: 1.5vw;
-
+    margin-left: -0.8vw;
     margin-top: 1vw;
 }
 .icons-2{
@@ -591,12 +591,12 @@ body{
     font-size: 2vw;
     color: #33A9FE;
     margin-left: 1vw;
-   
 }
+
 .rate p {
-    font-size: 1.2vw;
-    color: #eee;
-    font-weight: lighter;
+    position: absolute;
+    margin-top: -2.75vw;
+    margin-left:2.5vw;
 }
 .graph-div{
     margin-top: 3.75vw;
@@ -819,7 +819,7 @@ body{
     margin-left: 4.5vw;
     margin-top: 2.5vw;
 }
-.ans-div input{
+.ans-div #ans{
     width: 45vw;
     height: 5vw;
     padding-left: 1vw;
@@ -836,7 +836,7 @@ body{
     padding-bottom: 1vw;
     border-right: none;
 }
-.ans-div input:focus{
+.ans-div #ans:focus{
     outline: none;
 }
 .a-b{
