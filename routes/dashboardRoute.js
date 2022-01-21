@@ -204,7 +204,7 @@ router.post('/sentence', ensureAuthenticated, (req,res)=> {
     var repo =0
     var energy = -5
     var increase = 0
-    if (sentence.toLower() == csentence.toLower()) {
+    if (sentence.toLowerCase() == csentence.toLowerCase()) {
         increase = 200
         repo = 3
     } else {
