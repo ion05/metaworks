@@ -198,13 +198,13 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
 
 router.post('/sentence', ensureAuthenticated, (req,res)=> {
     const csentence = req.cookies.sentence
-    const sentence = req.body.sentence
+    const sentence = req.body.answer
     res.clearCookie('sentence')
     const username = req.user.username
     var repo =0
     var energy = -5
     var increase = 0
-    if (sentence == csentence) {
+    if (sentence.toLower() == csentence.toLower()) {
         increase = 200
         repo = 3
     } else {
