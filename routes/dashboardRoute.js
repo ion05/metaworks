@@ -39,8 +39,8 @@ router.get('/intro', ensureAuthenticated ,(req, res) => {
 })
 
 router.get('/work', ensureAuthenticated, async (req, res) => {
-    // generate random number between 1 and 4 
-    const randomNumber = Math.floor(Math.random() * 4) + 1;
+    // generate random number between 1 and 4
+    const randomNumber = Math.floor(Math.random() * 3) + 1;
 //     const randomNumber = 1
     // render the corresponding page
     switch(randomNumber)  {
@@ -180,7 +180,7 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
                     reason = energyC.reason
                 }
                 else {
-                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                    reason = moneyC.ok ? repoC.reason : moneyC.reason
                 }
                 reset(username)
                 res.render('fired', {
@@ -198,13 +198,13 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
 
 router.post('/sentence', ensureAuthenticated, (req,res)=> {
     const csentence = req.cookies.sentence
-    const sentence = req.body.sentence
+    const sentence = req.body.answer
     res.clearCookie('sentence')
     const username = req.user.username
     var repo =0
     var energy = -5
     var increase = 0
-    if (sentence == csentence) {
+    if (sentence.toLowerCase() == csentence.toLowerCase()) {
         increase = 200
         repo = 3
     } else {
@@ -250,7 +250,7 @@ router.post('/sentence', ensureAuthenticated, (req,res)=> {
                     reason = energyC.reason
                 }
                 else {
-                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                    reason = moneyC.ok ? repoC.reason : moneyC.reason
                 }
                 reset(username)
                 res.render('fired', {
@@ -285,7 +285,7 @@ const type = req.body.type
 switch (type) {
     case 1:
         var userr = req.user
-        if (user.repo % 10 == 0) {
+        if (userr.reputation % 10 == 0) {
             const money = 0 
             const energy = 5
             const repo = 5 
@@ -353,7 +353,7 @@ switch (type) {
         break
     case 2:
         var userr = req.user
-        if (user.repo % 5 == 0) {
+        if (userr.reputation % 5 == 0) {
             const money = 0 
             const energy = 5
             const repo = 5 
