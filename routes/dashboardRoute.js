@@ -180,7 +180,7 @@ router.post('/quiz', ensureAuthenticated, (req, res) => {
                     reason = energyC.reason
                 }
                 else {
-                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                    reason = moneyC.ok ? repoC.reason : moneyC.reason
                 }
                 reset(username)
                 res.render('fired', {
@@ -250,7 +250,7 @@ router.post('/sentence', ensureAuthenticated, (req,res)=> {
                     reason = energyC.reason
                 }
                 else {
-                    reason = moneyC.ok ? moneyC.reason : repoC.reason
+                    reason = moneyC.ok ? repoC.reason : moneyC.reason
                 }
                 reset(username)
                 res.render('fired', {
