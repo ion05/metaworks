@@ -285,7 +285,7 @@ const type = req.body.type
 switch (type) {
     case 1:
         var userr = req.user
-        if (userr.repo % 10 == 0) {
+        if (userr.reputation % 10 == 0) {
             const money = 0 
             const energy = 5
             const repo = 5 
@@ -353,7 +353,7 @@ switch (type) {
         break
     case 2:
         var userr = req.user
-        if (userr.repo % 5 == 0) {
+        if (userr.reputation % 5 == 0) {
             const money = 0 
             const energy = 5
             const repo = 5 
