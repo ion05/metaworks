@@ -16,16 +16,16 @@ body{
 .landing-div{
     width: 100%;
     background: #121E2A;
-    height: 50vw;
+    height: 50vh;
 }
 .title-div{
     text-align: center;
     color: #eee;
-    padding-top: 10vw;
-    height: 35vw;
+    padding-top: 10vh;
+    height: 35vh;
 }
 .title-div h1{
-    font-size: 3.5vw;
+    font-size: 3.5vh;
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -33,10 +33,10 @@ body{
     color: #33A9FE;
 }
 .title-div p{
-    font-size: 1vw;
+    font-size: 1vh;
     letter-spacing: 1px;
-    margin-top: 2.5vw;
-    padding-bottom: 2.5vw;
+    margin-top: 2.5vh;
+    padding-bottom: 2.5vh;
 }
 .title-div h1 span{
     color: #33A9FE;
@@ -44,12 +44,12 @@ body{
 .title-div a {
     background: #eee;
     color: #121E2A;
-    font-size: 1.5vw;
-    padding-left: 2.5vw;
-    padding-right: 2.5vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    border-radius: 2vw;
+    font-size: 1.5vh;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 2vh;
     text-decoration: none;
     transition:  0.1s ease;
 }
@@ -59,10 +59,10 @@ body{
     border: 1px solid #eee;
 }
 .about-div{
-    margin-top: 7.5vw;
+    margin-top: 7.5vh;
 }
 .about-div h2{
-    font-size: 3.5vw;
+    font-size: 3.5vh;
     font-weight: 800;
     color: #121E2A;
 }
@@ -73,28 +73,28 @@ body{
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-left: 2.5vw;
+    margin-left: 2.5vh;
 }
 .about-div ul li{
-    width: 26.5vw;
-    height: 27.5vw;
+    width: 26.5vh;
+    height: 27.5vh;
     background: #121E2A;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    margin-right: 5vw;
-    border-radius: 2.5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 5vh;
+    border-radius: 2.5vh;
     background: #eee;
     box-shadow:  10px 10px 20px #d0d0d0,
     -10px -10px 20px #e2e2e2;
-    padding-top: 4vw;
+    padding-top: 4vh;
 }
 .material-icons-outlined{
     font-family: 'Material Icons';
 }
 #span1,#span2,#span3{
-    font-size: 7.5vw;
-    margin-left: 9.5vw;
-    padding-top: 5vw;
+    font-size: 7.5vh;
+    margin-left: 9.5vh;
+    padding-top: 5vh;
 }
 #span1{
     color: #F47960;
@@ -106,98 +106,98 @@ body{
     color: #FAC762;
 }
 .about-div h3{
-    padding-top: 0.25vw;
-    font-size: 2.25vw;
-    padding-bottom: 0.5vw;
+    padding-top: 0.25vh;
+    font-size: 2.25vh;
+    padding-bottom: 0.5vh;
 }
 .feature-div{
-    margin-top: 5vw;
+    margin-top: 5vh;
 }
 .ft-content{
-    margin-left: 52.5vw;
-    margin-top: 10vw;
+    margin-left: 52.5vh;
+    margin-top: 10vh;
 }
 .feature-div h4{
     color: #33A9FE;
     letter-spacing: 2.5px;
-    font-size: 1.25vw;
+    font-size: 1.25vh;
 }
 .ft-content h2{
     letter-spacing: 1px;
-    font-size: 2vw;
-    margin-top: 0.5vw;
+    font-size: 2vh;
+    margin-top: 0.5vh;
 }
 .ft-content p{
-    font-size: 1.15vw;
-    margin-top: 1.5vw;
+    font-size: 1.15vh;
+    margin-top: 1.5vh;
 }
 .quote-div{
-    margin-top: 10vw;
+    margin-top: 10vh;
     text-align: center;
     letter-spacing: 1px;
-    font-size: 2vw;
+    font-size: 2vh;
     font-weight: 800;
 }
 .quote-div span{
     color: #33A9FE;
 }
 .customer-div{
-    margin-top: 15vw;
+    margin-top: 15vh;
 }
 .customer-div h2, .customer-div p{
     text-align: center;
     letter-spacing: 1px;
 }
 .customer-div h2{
-    font-size: 3.5vw;
+    font-size: 3.5vh;
 }
 .customer-div h2 span{
     color: #33A9FE;
 }
 .customer-div p{
-    margin-top: 2.5vw;
+    margin-top: 2.5vh;
 }
 .customer-div ul{
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-left: 2.5vw;
+    margin-left: 2.5vh;
 }
 .customer-div ul li{
-    width: 26.5vw;
-    height: 17.5vw;
+    width: 26.5vh;
+    height: 17.5vh;
     background: #121E2A;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    margin-right: 5vw;
-    border-radius: 2.5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 5vh;
+    border-radius: 2.5vh;
     background: #eee;
     box-shadow:  10px 10px 20px #d0d0d0,
     -10px -10px 20px #e2e2e2;
-    padding-top: 4vw;
+    padding-top: 4vh;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 .customer-div ul li span{
-    font-size: 3.5vw;
-    padding-left: 1.75vw;
+    font-size: 3.5vh;
+    padding-left: 1.75vh;
     color: #121E2A;
 }
 .customer-div ul li p{
     text-align: left;
-    margin-left: 2.5vw;
-    margin-top: 1vw;
-    font-size: 1vw;
+    margin-left: 2.5vh;
+    margin-top: 1vh;
+    font-size: 1vh;
 }
 .customer-div ul li h4{
     position: absolute;
-    margin-left: 6.5vw;
-    margin-top: -3.25vw;
+    margin-left: 6.5vh;
+    margin-top: -3.25vh;
 }
 .customer-div ul li h6{
     position: absolute;
-    margin-left: 6.5vw;
-    margin-top: -1.65vw;
+    margin-left: 6.5vh;
+    margin-top: -1.65vh;
 }
 .customer-div ul li:hover{
     background: #121E2A;
@@ -213,83 +213,83 @@ body{
     color: #FAC762;
 }
 .banner-div{
-    height: 20vw;
+    height: 20vh;
     background: #33A9FE;
-    margin-top: 5vw;
+    margin-top: 5vh;
     color: #121E2A;
 }
 .banner-div h2{
-    font-size: 3vw;
+    font-size: 3vh;
     text-align: center;
-    margin-top: 5vw;
+    margin-top: 5vh;
 }
 .banner-div h2 span{
     color:#eee;
 }
 .banner-div p{
     text-align: center;
-    font-size: 1.35vw;
+    font-size: 1.35vh;
     color: #eee;
 }
 .footer-div{
-    height: 10vw;
+    height: 10vh;
     background: #121E2A;
 }
 #reg{
-    margin-left: 1.5vw;
+    margin-left: 1.5vh;
 }
 .nav-div ul{
     list-style: none;
     display: flex;
-    margin-left: 36.5vw;
-    width: 27.5vw;
-    padding-top: 2.5vw;
+    margin-left: 36.5vh;
+    width: 27.5vh;
+    padding-top: 2.5vh;
 }
 .nav-div ul a{
     color: #eee;
-    font-size: 1.5vw;
+    font-size: 1.5vh;
     text-decoration: none;
 }
 .foot-log{
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 3.5vh;
+    height: 3.5vh;
     background: #eee;
     position: absolute;
     border-radius: 100%;
-    margin-top: 3.5vw;
-    margin-left: 2.5vw;
+    margin-top: 3.5vh;
+    margin-left: 2.5vh;
 }
 .footer-div h2{
     color: #33A9FE;
     letter-spacing: 1.5px;
     position: absolute;
-    margin-left: 7.5vw;
-    margin-top: 4.25vw;
+    margin-left: 7.5vh;
+    margin-top: 4.25vh;
 }
 .footer-div p{
     color: #eee;
     font-weight: 700;
     letter-spacing: 1.5px;
     position: absolute;
-    margin-left: 75vw;
-    margin-top: 4.75vw;
+    margin-left: 75vh;
+    margin-top: 4.75vh;
 }
 .login-div,.reg-div{
     position: absolute;
-    width: 35vw;
-    margin-left: 10vw;
+    width: 35vh;
+    margin-left: 10vh;
 }
 .login-div{
-    margin-top: 9.5vw;
+    margin-top: 9.5vh;
 }
 .reg-div{
-    margin-top: 6.75vw;
+    margin-top: 6.75vh;
 }
 .login-div h1,.reg-div h1{
-    font-size: 3.5vw;
+    font-size: 3.5vh;
 }
 .login-div p,.reg-div p{
-    margin-top: 1.5vw;
+    margin-top: 1.5vh;
     letter-spacing: 1px;
 }
 .login-div p a ,.reg-div p a{
@@ -297,35 +297,35 @@ body{
     text-decoration: none;
 }
 .login-div form,.reg-div form{
-    margin-top: 3.5vw;
+    margin-top: 3.5vh;
 }
 .form-gp{
-    margin-bottom: 2.5vw;
+    margin-bottom: 2.5vh;
 }
 .form-gp input{
-    margin-top: 1vw;
-    width: 25vw;
-    height: 2.5vw;
-    padding-left: 1vw;
+    margin-top: 1vh;
+    width: 25vh;
+    height: 2.5vh;
+    padding-left: 1vh;
     font-family: 'sofia pro', sans-serif;
     border-radius: 5px;
     border: none;
     background: #121E2A;
     color: #eee;
     letter-spacing: 1px;
-    margin-left: 0.5vw;
+    margin-left: 0.5vh;
 }
 .form-gp input:focus{
     outline: none !important; 
 }
 .login-div .submit, .reg-div .submit{
-    width: 15vw;
-    height: 3vw;
-    font-size: 1.25vw;
+    width: 15vh;
+    height: 3vh;
+    font-size: 1.25vh;
     background: #33A9FE;
     border: none;
     color: #eee;
-    border-radius: 2vw;
+    border-radius: 2vh;
     cursor: pointer;
 }
 .error-div{
@@ -336,24 +336,24 @@ body{
     height: 100vh;
 }
 .dashboard-div h1,.market-div h1,.leaderboard-div h1{
-    font-size: 10vw;
+    font-size: 17.5vh;
     color: #172231;
     letter-spacing: 1px;
     position: absolute;
-    margin-top: 82.5vh;
+    margin-top: 85vh;
     text-align: center;
 }
 .nav-dash{
     position: absolute;
-    margin-top: 50vw;
-    margin-left: 37.5vw;
+    margin-top: 90vh;
+    margin-left: 70vh;
 }
 .nav-dash-ul {
     display: flex;
-    width: 25vw;
+    width: 50vh;
 }
 #a-2{
-    margin-left: -1vw;
+    margin-left: -2vh;
     position: absolute;
 }
 #a-3{
@@ -363,7 +363,7 @@ body{
     list-style: none;
     flex: 0 1 auto; 
     color: #eee;
-    font-size: 1.25vw;
+    font-size: 2.5vh;
 }
 .nav-dash a{
     color: #eee;
@@ -385,12 +385,12 @@ body{
 
 .log-dash-i{
     position: absolute;
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 5vh;
+    height: 5vh;
     background: #eee;
     border-radius: 100%;
-    margin-left: 3.5vw;
-    margin-top: 50vw;
+    margin-left: 6.5vh;
+    margin-top: 90vh;
 }
 .line-1,
 .line-2{
@@ -399,30 +399,30 @@ body{
     width: 100%;
 }
 .line-div-1{
-    width: 3.5vw;
+    width: 7.5vh;
     display: none;
     cursor: pointer;
 }
 .line-2{
-    margin-top: 0.2vw;
+    margin-top: 0.2vh;
 }
 .user-prof-icon{
     position: absolute;
-    margin-left: 91.5vw;
-    margin-top: 50vw;
+    margin-left: 92.5%;
+    margin-top: 90.5vh;
 }
 .line-div{
-    width: 2vw;
+    width: 5vh;
     height: 10px;
     cursor: pointer;
 }
 .user-blob{
     position: absolute;
-    margin-top: 40vw;
-    width: 15vw;
-    height: 7.4vw;
+    margin-top: 75vh;
+    width: 25vh;
+    height: 10vh;
     background: rgba(0, 0, 0  ,0.5);
-    margin-left: 77.5vw;
+    margin-left: 80%;
     padding:5px;
     border-radius: 10px;
     display: none;
@@ -431,10 +431,10 @@ body{
     text-align: center;
     border-radius: 5px;
     position: absolute;
-    padding-top: .5vw;
-    width: 14.3vw;
-    padding-bottom: .5vw;
-    margin-top: 4vw;
+    padding-top: .5vh;
+    width: 95%;
+    padding-bottom: .5vh;
+    margin-top: 5vh;
 }
 .user-blob span:hover{
     background: red;
@@ -445,17 +445,17 @@ body{
 .user-blob a{
     text-decoration: none;
     color: #eee;
-    margin-bottom: 5vw;
+    margin-bottom: 5vh;
     letter-spacing: 1px;
 }
 .user-blob .prof{
     text-align: center;
     border-radius: 5px;
     position: absolute;
-    padding-top: .5vw;
-    width: 14.3vw;
-    padding-bottom: .5vw;
-    margin-top: .5vw;
+    padding-top: .5vh;
+    width: 95%;
+    padding-bottom: .5vh;
+    margin-top: .5vh;
 }
 .user-blob .prof:hover{
     background: transparent;
@@ -465,47 +465,47 @@ body{
 }
 .line{
     position: absolute;
-    width: 12.5vw;
-    margin-left: 1vw;
+    width: 90.5%;
+    margin-left: .5vh;
     height: 2px;
     background: rgba(255, 255, 255, 0.1);
-    margin-top: 3.5vw;
+    margin-top: 4.2vh;
 }
 .prof-div{
-    width: 20vw;
-    height: 40vw;
+    width: 40vh;
+    height: 75vh;
     background: #172231;
     position: absolute;
-    border-radius: 1.5vw;
-    margin-top: 4.5vw;
-    margin-left: 3.5vw;
+    border-radius: 1.5vh;
+    margin-top: 8.5vh;
+    margin-left: 7.5%;
 }
 .button-div{
-    width: 17.5vw;
-    height: 15vw;
+    width: 90%;
+    height: 32.5vh;
     background: #1F2E43;
-    margin-left: 1.35vw;
-    margin-top: 23.5vw;
-    border-radius: 1.5vw;
+    margin-left: 5%;
+    margin-top: 40vh;
+    border-radius: 1.5vh;
 }
 .log-info{
     position: absolute;
     text-align: center;
-    margin-top: 1.5vw;
+    margin-top: 1.5vh;
 }
 .log-info #log{ 
     color: #eee;
-    font-size: 13.5vw;
+    font-size: 25vh;
 }
 .log-info h2{
     color: #eee;
 }
 .user-s {
     display: flex;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
     font-weight: 800;
-    width: 15vw;
-    margin-left: 2vw;
+    width: 75%;
+    margin-left:10%;
     margin-top: 15px;
 }
 .energy{
@@ -517,20 +517,24 @@ body{
 .log-info h5{
     color: #35DF91;
     margin-top: 10px;
-    font-size: 1.25vw;
+    font-size: 1.5vh;
 }
 .button-div{
-    padding-top: 1.5vw;
+    padding-top: 5.5vh;
 }
 .icons-1,.icons-2{
     display: flex;
     text-align: center;
-    font-size: 1.5vw;
-    margin-left: -0.8vw;
-    margin-top: 1vw;
+    margin:auto;
+    padding-right: 2vh;
+    margin-top: 1vh;
+    font-size: 2.5vh;
+}
+.icons-1 .material-icons-outlined,.icons-2 .material-icons-outlined{
+    font-size: 3.5vh;
 }
 .icons-2{
-    margin-top: 2vw;
+    margin-top: 2vh;
 }
 .suit{
     color: #35DF91;
@@ -547,77 +551,77 @@ body{
 }
 .status-icon{
     position: absolute;
-    width: 2vw;
-    height: 2vw;
+    width: 4vh;
+    height: 4vh;
     background: #35DF91;
-    margin-top: -8.5vw;
+    margin-top: -15vh;
     border-radius: 100%;
-    margin-left: 13.5vw;
+    margin-left: 25.5vh;
     border: 5px solid #172231;
 }
 .curr-div{
     position: absolute;
     color: #eee;
-    margin-left: 30vw;
-    margin-top: 13.5vw;
+    margin-left: 35%;
+    margin-top: 30vh;
     overflow-y: scroll ;
-    height: 30vw; 
+    height:50vh; 
 }
-
 .curr-line{
-    width: 3.5vw;
+    width: 7.5vh;
     height: 3.5px;
     border-radius: 10px;
     background-color: #33A9FE;
 }
 .curr-div h2,.job-stats h2{
-    margin-top: 0.5vw;
+    margin-top: 0.5vh;
     letter-spacing: 2px;
+    font-size: 3.5vh;
 }
 .timeline-list{
-    margin-top: 2.5vw;
+    margin-top: 3.5vh;
 }
 .job-stats{
     position: absolute;
     color: #eee;
-    margin-top:13.5vw;
-    margin-left: 70vw;
+    margin-top: 30vh;
+    margin-left: 70%;
 }
 .material-icons-round{
     font-family: 'Material Icons', sans-serif;
 }
 .rate{
-    margin-top: 1.5vw;
-    font-size: 2vw;
+    margin-top: 2.5vh;
+    font-size: 5vh;
     color: #33A9FE;
-    margin-left: 1vw;
+    margin-left: 1vh;
 }
 
 .rate p {
     position: absolute;
-    margin-top: -2.75vw;
-    margin-left:2.5vw;
+    margin-top: -7vh;
+    margin-left: 6.5vh;
 }
 .graph-div{
-    margin-top: 3.75vw;
-    width: 22.5vw;
-    height: 19vw;
+    margin-top: 5vh;
+    width: 37.5vh;
+    height: 35vh;
     background-color: #1F2E43;
-    padding: 1vw;
+    padding: 2vh;
     border-radius: 10px;
 }
 .l{
     background-color: #33A9FE;
-    width: 2.5vw;
-    height: 0.25vw;
+    width: 5vh;
+    height: 0.25vh;
     border-radius: 10px;
-    margin-left: 0.25vw;
-    margin-top: 0.5vw;
+    margin-left: 0.25vh;
+    margin-top: 0.5vh;
 }
 .graph-div h3{
     letter-spacing: 1px;
-    margin-left: 0.25vw;
-    margin-top: .5vw;
+    margin-left: 0.25vh;
+    margin-top: .5vh;
 }
 .graph-div h3 span{
     color: #33A9FE;
@@ -632,60 +636,63 @@ body{
     color: #F47960;
 }
 #m,#o,#c{
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     position: absolute;
 }
 .timeline-list h4{
-    font-size: 2.5vw;
-    margin-bottom: 2vw;
+    font-size: 3.5vh;
+    margin-bottom: 2vh;
 }
 .timeline-list li{
-    margin-bottom: 2.5vw;
-    padding-left: 2vw;
-}.timeline-list li p{
-    margin-left: 4vw;
-    margin-top: 0.5vw;
+    margin-bottom: 2.5vh;
+    padding-left: 2vh;
+    font-size: 2.5vh;
+}
+.timeline-list li p{
+    margin-left: 4vh;
+    margin-top: 0.5vh;
 }
 .note-o,.note-s{
-    margin-left: 27.5vw;
-    margin-top: -1.75vw;
+    margin-left: 35vh;
+    margin-top: -3vh;
     position: absolute;
-    font-size: 1.5vw;
+    font-size: 2.5vh;
 }
 .note-o{
-    padding-left: 1.5vw;
+    padding-left: 1.5vh;
     color: #FAC762;
 }
 .note-s{
     color: #35DF91;
-    padding-left: 1.5vw;
+    padding-left: 1.5vh;
 }
 .hello-div{
     position: absolute;
     color: #eee;
-    margin-top: 3.5vw;
-    margin-left: 30vw;
+    margin-top: 7.5vh;
+    margin-left: 32.5%;
 }
 .hello-div h2{
-    font-size: 2.5vw;
+    font-size: 5vh;
     letter-spacing: 1px;
-    margin-top: 1vw;
-    margin-left: 5vw;
+    margin-top: 1vh;
+    margin-left: 12.5vh;
 }
-.hello-div span{
+.hello-div .material-icons-outlined{
     color: #33A9FE !important;
+    font-size: 7.5vh !important;
 }
 .hello-div h2 span{
     color: #33A9FE;
 }
 .hello-div p{
-    margin-left: 5vw;
+    margin-left: 13.5vh;
 }
 .hello-div .material-icons-outlined{
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     color: #eee;
-    margin-left: 1vw;
-    margin-top: 2.85vw;
+    margin-left: 1vh;
+    margin-top: 2.85vh;
     position: absolute;
 }
 .note-s span{
@@ -693,43 +700,43 @@ body{
 }
 .cart-div{
     position: absolute;
-    height: 10vw;
-    margin-left:33.5vw;
-    margin-top: 3.5vw;
+    height: 10vh;
+    margin-left:33.5vh;
+    margin-top: 3.5vh;
 }
 .cart-div span{
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     color: #35DF91;
 }
 .cart-div h2{
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     color: #eee;
     letter-spacing: 1px;
-    margin-top: 1.35vw;
-    margin-left: 5vw;
+    margin-top: 1.35vh;
+    margin-left: 5vh;
 }
 .cart-div p{
     color: #eee;
-    margin-left: 5vw;
-    margin-top: 1.5vw;
+    margin-left: 5vh;
+    margin-top: 1.5vh;
 }
 .cart-div .material-icons-outlined{
-    margin-left: 1vw;
-    margin-top: 1.5vw;
+    margin-left: 1vh;
+    margin-top: 1.5vh;
     position: absolute;
 }
 .user-stats-div{
     position: absolute;
     display: flex;
-    width: 25vw;
-    font-size: 1.5vw;
+    width: 25vh;
+    font-size: 1.5vh;
     background: #172231;
-    padding-left: 3.5vw;
-    padding-top: 2.5vw;
-    padding-bottom: 2.5vw;
-    margin-left: 6.5vw;
-    margin-top: 4.5vw;
-    border-radius: 1vw;
+    padding-left: 3.5vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    margin-left: 6.5vh;
+    margin-top: 4.5vh;
+    border-radius: 1vh;
 }
 .reputation{
     color: #33A9FE;
@@ -738,43 +745,43 @@ body{
     position: absolute;
     color: #eee;
     letter-spacing: 1px;
-    margin-left: 8.5vw;
-    margin-top: 16.5vw;
+    margin-left: 8.5vh;
+    margin-top: 16.5vh;
 }
 .market-h2 h2{
     margin-top: 5px;
 }
 .market-banner{
-    width: 25vw;
-    height: 25vw;
+    width: 25vh;
+    height: 25vh;
     background: #172231;
     position: absolute;
-    border-radius: 1.5vw;
-    margin-left: 6.5vw;
-    margin-top: 20.5vw;
+    border-radius: 1.5vh;
+    margin-left: 6.5vh;
+    margin-top: 20.5vh;
 }
 .line-d{
-    width: 3.5vw;
+    width: 3.5vh;
     height: 3.5px;
     border-radius: 10px;
     background-color: #35DF91;
 }
 .circle{
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 7.5vh;
+    height: 7.5vh;
     border-radius: 100%;
     background: #121E2A;
     position: absolute;
-    margin-top: 5vw;
+    margin-top: 5vh;
     left: 30%;
     overflow: hidden;
 }
 .circle .material-icons-outlined{
     color: #1F2E43;
-    font-size: 5vw;
+    font-size: 5vh;
     position: absolute;
     transform: rotate(-30deg);
-    margin-left: 0.75vw;
+    margin-left: 0.75vh;
 }
 #sent{
     user-select: none;
@@ -785,89 +792,89 @@ body{
     color: #eee;   
 }
 .title-span h2{
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     letter-spacing: 1px;
 }
 .title-span{
     position: absolute;
-    margin-top: 7.5vw;
-    margin-left: 25vw;
+    margin-top: 7.5vh;
+    margin-left: 25vh;
 }
 .title-span h2{
-    margin-left: 3.5vw;
+    margin-left: 3.5vh;
 }
 .title-span h2 span{
     color: #F47960;
 }
 .title-span p{
-    margin-left: 3.5vw;
-    margin-top: 1vw;
+    margin-left: 3.5vh;
+    margin-top: 1vh;
 }
 .title-span .material-icons-outlined{
     color: #F47960;
-    font-size: 1.5vw;
+    font-size: 1.5vh;
 }
 .ans-div {
     position: absolute;
-    margin-left: 25vw;
-    margin-top: 15vw;
+    margin-left: 25vh;
+    margin-top: 15vh;
 }
 .ans-div #sent{
-    font-size: 2.5vw;
+    font-size: 2.5vh;
     letter-spacing: 1px;
     font-weight: 700;
-    margin-left: 4.5vw;
-    margin-top: 2.5vw;
+    margin-left: 4.5vh;
+    margin-top: 2.5vh;
 }
 .ans-div #ans{
-    width: 45vw;
-    height: 5vw;
-    padding-left: 1vw;
+    width: 45vh;
+    height: 5vh;
+    padding-left: 1vh;
     font-family: 'sofia pro', sans-serif;
-    margin-top: 5vw;
-    font-size: 3.5vw;
-    margin-left: 3.5vw;
+    margin-top: 5vh;
+    font-size: 3.5vh;
+    margin-left: 3.5vh;
     border-bottom: 2px solid #33A9FE;
-    border-radius: .1vw;
+    border-radius: .1vh;
     background: transparent;
     border-top:none;
     border-left: none;
     color: #eee;
-    padding-bottom: 1vw;
+    padding-bottom: 1vh;
     border-right: none;
 }
 .ans-div #ans:focus{
     outline: none;
 }
 .a-b{
-    width: 20vw;
+    width: 20vh;
     font-family: 'sofia pro';
-    height: 3.5vw;
+    height: 3.5vh;
     background: #33A9FE;
-    font-size: 2vw;
+    font-size: 2vh;
     color: #eee;
     letter-spacing: 1px;
     border: none;
-    border-radius: 2vw;
+    border-radius: 2vh;
     cursor: pointer;
-    margin-top: 5vw;
-    margin-left: 5vw;
+    margin-top: 5vh;
+    margin-left: 5vh;
 }
 .sent-div h1{
-    font-size: 10vw;
+    font-size: 10vh;
     color: #172231;
     letter-spacing: 1px;
     position: absolute;
-    margin-top: 46.5vw;
+    margin-top: 46.5vh;
     text-align: center;
 }
 .quiz-div{
-    height: 100vw;
+    height: 100vh;
     background: #121E2A;
     color: #eee;
 }
 .quiz-div h2{
-    font-size: 3.5vw;
+    font-size: 3.5vh;
     letter-spacing: 1px;
 }
 .quiz-div h2 span{
@@ -875,130 +882,130 @@ body{
 }
 .quiz-span{
     position: absolute;
-    margin-top: 5vw;
-    padding-left: 15vw;
+    margin-top: 5vh;
+    padding-left: 15vh;
 }
 .quiz-form{
-    margin-top: 15vw;
-    width: 40vw;
-    margin-left: 20.5vw;
+    margin-top: 15vh;
+    width: 40vh;
+    margin-left: 20.5vh;
 }
 .quiz-form p{
     letter-spacing: 1px;
-    font-size: 1.5vw;
-    margin-bottom: 1vw;
-    margin-top: 00.5vw;
+    font-size: 1.5vh;
+    margin-bottom: 1vh;
+    margin-top: 00.5vh;
 }
 .quiz-form input{
     font-family: 'sofia pro', sans-serif;
-    height: 2.5vw;
-    padding-left: 1.5vw;
-    font-size: 1.5vw;
+    height: 2.5vh;
+    padding-left: 1.5vh;
+    font-size: 1.5vh;
     border-bottom: 2px solid #33A9FE;
     border-top: none;
     border-left: none;
     border-right: none;
     background: transparent;
-    padding-bottom: 0.5vw;
+    padding-bottom: 0.5vh;
     color: #eee;
 }
 .quiz-form input:focus{
     outline: none;
 }
 .quiz-form button{
-    margin-top: 5vw;
+    margin-top: 5vh;
     font-family: 'sofia pro', sans-serif;
-    width: 20vw;
-    height: 3.5vw;
-    font-size: 2vw;
+    width: 20vh;
+    height: 3.5vh;
+    font-size: 2vh;
     color: #eee;
     background: #33A9FE;
-    border-radius: 2vw;
+    border-radius: 2vh;
     border:none;
     cursor: pointer;
 }
 .quiz-div .material-icons-outlined{
-    font-size: 1.5vw;
+    font-size: 1.5vh;
     color: #F47960;
 }
 #shield{
     position: absolute;
-    margin-top: 7.5vw;
-    margin-left: 11.5vw;
+    margin-top: 7.5vh;
+    margin-left: 11.5vh;
     color: #FAC762;
-    font-size: 5vw;
+    font-size: 5vh;
 }
 .powerup-info{
     text-align: center;
     position: absolute;
-    margin-top: 15vw;
+    margin-top: 15vh;
     color: #fac762;
     letter-spacing: 1px;
 }
 .powerup-info button{
-    width: 10vw;
-    height: 2.5vw;
-    border-radius: 2vw;
-    margin-top: 1.5vw;
+    width: 10vh;
+    height: 2.5vh;
+    border-radius: 2vh;
+    margin-top: 1.5vh;
     background-color: #121E2A;
     color: #FAC762;
     border: none;
     opacity: 0.9;
 }
 .result-div{
-    height: 100vw;
+    height: 100vh;
     background: #121E2A;
 }
 .result-div h2{
     color: #eee;
-    font-size: 3.5vw;
+    font-size: 3.5vh;
     letter-spacing: 1px;
     position: absolute;
-    margin-top: 2.5vw;
-    margin-left: 5vw;
+    margin-top: 2.5vh;
+    margin-left: 5vh;
 }
 .res-span{
     position: absolute;
-    margin-left: 7.5vw;
-    margin-top: 7.5vw;
-    font-size: 2vw;
+    margin-left: 7.5vh;
+    margin-top: 7.5vh;
+    font-size: 2vh;
     color: #eee;
 }
 .result-div a{
-    width: 20vw;
-    height: 3.5vw;
-    font-size: 2vw;
+    width: 20vh;
+    height: 3.5vh;
+    font-size: 2vh;
     color: #eee;
     background: #33A9FE;
-    border-radius: 2vw;
+    border-radius: 2vh;
     border:none;
     cursor: pointer;
     position: absolute;
-    margin-left: 5vw;
-    margin-top: 25vw;
+    margin-left: 5vh;
+    margin-top: 25vh;
     text-align: center;
     text-decoration: none;
-    padding-top: 0.5vw;
+    padding-top: 0.5vh;
 }
 .curr-div h5{
-    font-size: 5vw;
+    font-size: 5vh;
     letter-spacing: 2px;
-    margin-top: 2.5vw;
-    margin-left: 1.5vw;
+    margin-top: 2.5vh;
+    margin-left: 1.5vh;
 }
 .suit{
     cursor: pointer;
 }
 .modal,.modal-1{
     display: none;
-    width: 35vw;
-    height: 20vw;
+    width: 35vh;
+    height: 20vh;
     background-color: #172231;
     position: absolute;
-    margin-top: 15vw;
+    margin-top: 15vh;
     padding: 10px;
-    border-radius: 1vw;
-    margin-left: 32.5vw;
+    border-radius: 1vh;
+    margin-left: 32.5vh;
 
 }
 .complain,.repo{
@@ -1009,7 +1016,7 @@ body{
     position: absolute;
     background-color: rgba(0, 0, 0  ,0.5);
     height: 100vh;
-    margin-top:-55vw;
+    margin-top:-55vh;
     display: none;
 }
 @keyframes modal-animation {
@@ -1021,10 +1028,10 @@ body{
     }
 }
 .close,.close-1{
-    width: 2.5vw;
-    height: 2.5vw;
-    font-size: 1.25vw;
-    margin-left: 30vw;
+    width: 2.5vh;
+    height: 2.5vh;
+    font-size: 1.25vh;
+    margin-left: 30vh;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -1032,51 +1039,51 @@ body{
     transition: all 0.5s ease;
 }
 .close:hover,.close-1:hover{
-    font-size: 1.5vw;
+    font-size: 1.5vh;
 }
 .leaderboard-content{
     position: absolute;
-    margin-top: 5vw;
-    margin-left: 35vw;
+    margin-top: 5vh;
+    margin-left: 35vh;
     color: #eee;
-    font-size: 2vw;
+    font-size: 2vh;
 }
 .leaderboard-content h2{
-    margin-left: 3.5vw;
+    margin-left: 3.5vh;
 }
 .leaderboard-content h2 span{
     color: #FAC762;
 }
 .leaderboard-content p{
-    font-size: 1.5vw;
-    margin-left: 3.5vw;
+    font-size: 1.5vh;
+    margin-left: 3.5vh;
 }
 .leaderboard-content .material-icons-outlined{
     color: #FAC762;
     position: absolute;
-    margin-top: .75vw;
+    margin-top: .75vh;
 }
 .user-rank{
     background-color: #1F2E43;
     color: #eee;
-    width: 20vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    border-radius: 1vw;
+    width: 20vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-radius: 1vh;
     position: absolute;
-    margin-top: 4.5vw;
-    margin-left: 3.5vw;
+    margin-top: 4.5vh;
+    margin-left: 3.5vh;
 }
 .user-rank h3{
     color: #FAC762;
 }
 .user-rank p{
     position: absolute;
-    margin-top: -1.7vw;
-    margin-left: 7vw;
-    font-size: 1.5vw;
+    margin-top: -1.7vh;
+    margin-left: 7vh;
+    font-size: 1.5vh;
 }
 .rank{
     background: rgba(23, 51, 75, 0.09);
@@ -1084,110 +1091,110 @@ body{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.6px);
     -webkit-backdrop-filter: blur(7.6px);
-    border-radius: 1.2vw;
+    border-radius: 1.2vh;
     text-align: center;
 }
 #rank0{
     position: absolute;
-    margin-top: 20vw;
-    margin-left: 38.5vw;
-    height: 25vw;
-    width: 22.5vw;
+    margin-top: 20vh;
+    margin-left: 38.5vh;
+    height: 25vh;
+    width: 22.5vh;
 }
 #rank1{
-    height: 20vw;
-    width: 22.5vw;
+    height: 20vh;
+    width: 22.5vh;
     position: absolute;
-    margin-top: 25vw;
-    margin-left: 10vw;
+    margin-top: 25vh;
+    margin-left: 10vh;
 }
 #rank2{
-    height: 18.5vw;
-    width: 22.5vw;
+    height: 18.5vh;
+    width: 22.5vh;
     position: absolute;
-    margin-top: 26.5vw;
-    margin-left: 67vw;
+    margin-top: 26.5vh;
+    margin-left: 67vh;
 }
 .rank-div h2:nth-child(1){
-    font-size: 5vw;
+    font-size: 5vh;
     position: absolute;
     font-weight: 800;
     letter-spacing: 1px;
     color: #33A9FE;
     text-align: center;
-    margin-top: 16vw;
+    margin-top: 16vh;
 }
 .rank-div h2:nth-child(2){
-    font-size: 5vw;
+    font-size: 5vh;
     position: absolute;
     font-weight: 800;
     letter-spacing: 1px;
     color: #FAC762;
-    margin-left: 12.5vw;
-    margin-top: 21vw;
+    margin-left: 12.5vh;
+    margin-top: 21vh;
 }
 .rank-div h2:nth-child(3){
-    font-size: 5vw;
+    font-size: 5vh;
     position: absolute;
     font-weight: 800;
     letter-spacing: 1px;
     color: #35DF91;
-    margin-left: 72.5vw;
-    margin-top: 22.5vw;
+    margin-left: 72.5vh;
+    margin-top: 22.5vh;
 }
 
 #rank0 .material-icons-outlined{
-    font-size: 12.5vw;
+    font-size: 12.5vh;
     color: #eee;
 }
 #rank1 .material-icons-outlined{
-    font-size: 10vw;
+    font-size: 10vh;
     color: #eee;
 }
 #rank2 .material-icons-outlined{
-    font-size: 7.5vw;
+    font-size: 7.5vh;
     color: #eee;
 }
 #rank0 button{
-    width: 20vw;
-    height: 3vw;
+    width: 20vh;
+    height: 3vh;
     font-family: 'sofia pro', sans-serif;
-    font-size: 1.5vw;
-    border-radius: .5vw;
+    font-size: 1.5vh;
+    border-radius: .5vh;
     background: #1f2e43a1;
     color: #eee;
     border:none;
-    margin-top: 5vw;
+    margin-top: 5vh;
     cursor: pointer;
 }
 #rank1 button{
-    width: 20vw;
-    height: 3vw;
+    width: 20vh;
+    height: 3vh;
     font-family: 'sofia pro', sans-serif;
-    font-size: 1.5vw;
-    border-radius: .5vw;
+    font-size: 1.5vh;
+    border-radius: .5vh;
     background: #1f2e43a1;
     color: #eee;
     border:none;
     cursor: pointer;
-    margin-top: 2vw;
+    margin-top: 2vh;
 }
 #rank2 button{
-    width: 20vw;
-    height: 3vw;
+    width: 20vh;
+    height: 3vh;
     font-family: 'sofia pro', sans-serif;
-    font-size: 1.5vw;
-    border-radius: .5vw;
+    font-size: 1.5vh;
+    border-radius: .5vh;
     background: #1f2e43a1;
     color: #eee;
     border:none;
     cursor: pointer;
-    margin-top: 3vw;
+    margin-top: 3vh;
 }
 .rank h3{
     color: #eee;
     letter-spacing: 1px;
-    font-size: 1.5vw;
+    font-size: 1.5vh;
 }
 .wellcome
 {
@@ -1197,68 +1204,68 @@ body{
   top: calc(45% - 90px);
   left: calc(43.5% - 300px);
   text-align: center;
-  font-size: 6.5vw;
+  font-size: 6.5vh;
   letter-spacing: 1px;
   color: #eee;
 }
 .button-intro{
-    width: 15vw;
+    width: 15vh;
     position: absolute;
     animation: button 1s ease-in;
     transition: all ease;
     display: block;
     left: 42.5%;
-    height: 3.5vw;
+    height: 3.5vh;
     background-color: #33A9FE;
     border-radius: 10px;
-    font-size: 1.25vw;
+    font-size: 1.25vh;
     font-family: 'sofia pro',sans-serif;
-    margin-top: 35vw;
+    margin-top: 35vh;
     letter-spacing: 1px;
     border:none;
     color: #eee;
     cursor:pointer;
 }
 .instruct-div form button{
-    width: 15vw;
+    width: 15vh;
     position: absolute;
     transition: all ease;
     display: block;
     left: 42.5%;
-    height: 3.5vw;
+    height: 3.5vh;
     background-color: #33A9FE;
     border-radius: 10px;
-    font-size: 1.25vw;
+    font-size: 1.25vh;
     font-family: 'sofia pro',sans-serif;
     letter-spacing: 1px;
     border:none;
     color: #eee;
-    margin-top: 5vw;
+    margin-top: 5vh;
     cursor:pointer;
 }
 .instruct-div{
-    margin-top: 15vw;
+    margin-top: 15vh;
     position: absolute;
-    height: 40vw;
+    height: 40vh;
     color: #eee;
     text-align: center;
 }
 .instruct-div h2{
-    font-size: 5vw;
+    font-size: 5vh;
     letter-spacing: 1px;
     font-weight: bold;
 }
 .instruct-div p{
-    margin-top: 5vw;
+    margin-top: 5vh;
 }
 @keyframes button {
     from{
         opacity: 0;
-        margin-top: 37.5vw;
+        margin-top: 37.5vh;
     }
     to{
         opacity: 1;
-        margin-top: 35vw;
+        margin-top: 35vh;
     }
 }
 .instruct-div{
@@ -1266,15 +1273,15 @@ body{
 }
 .power-up-div{
     position: absolute;
-    width: 50vw;
-    margin-top: 15vw;
-    margin-left: 35vw;
+    width: 50vh;
+    margin-top: 15vh;
+    margin-left: 35vh;
 }
 .power-up-div button{
-    width: 15vw;
+    width: 15vh;
     font-family: 'sofia pro', sans-serif;
-    height: 3vw;
-    font-size: 1.2vw;
+    height: 3vh;
+    font-size: 1.2vh;
     font-weight: bold;
     background-color: #172231;
     color: #eee;
@@ -1284,9 +1291,9 @@ body{
 }
 .modal form,.modal-1 form{
     position: absolute;
-    width: 25vw !important;
-    margin-left: 5vw;
-    margin-top: 1.5vw;
+    width: 25vh !important;
+    margin-left: 5vh;
+    margin-top: 1.5vh;
 }
 
 .modal form #complain,.modal-1 form #request{
@@ -1294,8 +1301,8 @@ body{
     color: #eee;
     border: none;
     font-family: 'sofia pro', sans-serif;
-    height: 2vw;
-    font-size: 1.25vw;
+    height: 2vh;
+    font-size: 1.25vh;
     border-bottom: 2px solid #eee;
 }
 .modal form #complain:focus{
@@ -1312,22 +1319,22 @@ body{
     color: #eee;
 }
 .modal form select,.modal-1 form select {
-    margin-top: 1.5vw;
+    margin-top: 1.5vh;
     padding: 5px;
     font-family: 'sofia pro', sans-serif;
     border: none;
     background: #121E2A;
     color: #eee;
-    font-size: 1.25vw;
+    font-size: 1.25vh;
 }
 .modal form select:focus ,.modal-1 form select:focus{
     outline: none;
 }
 
 .modal form #submit,.modal-1 form #submit{
-    margin-top: 2.5vw;
+    margin-top: 2.5vh;
     font-family: 'spfia pro', sans-serif;
-    font-size: 1.25vw;
+    font-size: 1.25vh;
     padding-top: 7.5px;
     padding-bottom: 7.5px;
     background: #33A9FE;
@@ -1341,28 +1348,28 @@ body{
 }
 .modal form{
     position: absolute;
-    width: 15vw;
+    width: 15vh;
 }
 .powers{
     display: flex;
     justify-content: space-between;
-    margin-top: 22.5vw;
-    margin-left: 7.5vw;
+    margin-top: 22.5vh;
+    margin-left: 7.5vh;
     position: absolute;
 }
 .power-card{
-    width: 20vw;
-    height: 20vw;
+    width: 20vh;
+    height: 20vh;
     background: #1F2E43;
     border-radius: 10px;
-    margin-left: 2vw;
+    margin-left: 2vh;
     text-align: center;
 }
 .power-card span{
-    font-size: 7.5vw;
+    font-size: 7.5vh;
     color: #eee;
 }
 .power-card h2{
-    padding-top: 3vw;
+    padding-top: 3vh;
     color: #eee;
 }

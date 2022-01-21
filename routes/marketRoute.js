@@ -14,14 +14,7 @@ router.get('/',ensureAuthenticated, (req, res) => {
     const energy= req.user.energy 
     const maxenergy = req.user.maxEnergy
     const energy_per = Math.round((energy/maxenergy)*100)
-<<<<<<< HEAD
-    
-    const power_list = req.cookies.power || ''
-    const power_list_array = power_list.split(',')
-    console.log(power_list_array)
-=======
     const power_list = req.cookies.power
->>>>>>> c50900c3d997f23f5408ee2b019186237f2e14b3
     res.render('market',{   
         user: req.user,
         energy_per,
