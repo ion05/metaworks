@@ -39,8 +39,8 @@ router.get('/intro', ensureAuthenticated ,(req, res) => {
 })
 
 router.get('/work', ensureAuthenticated, async (req, res) => {
-    // generate random number between 1 and 4 
-    const randomNumber = Math.floor(Math.random() * 4) + 1;
+    // generate random number between 1 and 4
+    const randomNumber = Math.floor(Math.random() * 2) + 1;
 //     const randomNumber = 1
     // render the corresponding page
     switch(randomNumber)  {
