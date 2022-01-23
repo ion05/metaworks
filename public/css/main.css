@@ -16,16 +16,16 @@ body{
 .landing-div{
     width: 100%;
     background: #121E2A;
-    height: 50vh;
+    height: 75vh;
 }
 .title-div{
     text-align: center;
     color: #eee;
     padding-top: 10vh;
-    height: 35vh;
+    height: 55vh;
 }
 .title-div h1{
-    font-size: 3.5vh;
+    font-size: 6.5vh;
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -33,7 +33,7 @@ body{
     color: #33A9FE;
 }
 .title-div p{
-    font-size: 1vh;
+    font-size: 2vh;
     letter-spacing: 1px;
     margin-top: 2.5vh;
     padding-bottom: 2.5vh;
@@ -44,7 +44,7 @@ body{
 .title-div a {
     background: #eee;
     color: #121E2A;
-    font-size: 1.5vh;
+    font-size: 2vh;
     padding-left: 2.5vh;
     padding-right: 2.5vh;
     padding-top: 1vh;
@@ -59,10 +59,10 @@ body{
     border: 1px solid #eee;
 }
 .about-div{
-    margin-top: 7.5vh;
+    margin-top: 10vh;
 }
 .about-div h2{
-    font-size: 3.5vh;
+    font-size: 6.5vh;
     font-weight: 800;
     color: #121E2A;
 }
@@ -76,8 +76,8 @@ body{
     margin-left: 2.5vh;
 }
 .about-div ul li{
-    width: 26.5vh;
-    height: 27.5vh;
+    width: 45vh;
+    height: 35vh;
     background: #121E2A;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -92,8 +92,8 @@ body{
     font-family: 'Material Icons';
 }
 #span1,#span2,#span3{
-    font-size: 7.5vh;
-    margin-left: 9.5vh;
+    font-size: 12.5vh;
+    margin-left: 16.5vh;
     padding-top: 5vh;
 }
 #span1{
@@ -106,29 +106,29 @@ body{
     color: #FAC762;
 }
 .about-div h3{
-    padding-top: 0.25vh;
-    font-size: 2.25vh;
+    padding-top: 1.5vh;
+    font-size: 3.5vh;
     padding-bottom: 0.5vh;
 }
 .feature-div{
     margin-top: 5vh;
 }
 .ft-content{
-    margin-left: 52.5vh;
+    margin-left: 100vh;
     margin-top: 10vh;
 }
 .feature-div h4{
     color: #33A9FE;
     letter-spacing: 2.5px;
-    font-size: 1.25vh;
+    font-size: 2vh;
 }
 .ft-content h2{
     letter-spacing: 1px;
-    font-size: 2vh;
+    font-size: 3vh;
     margin-top: 0.5vh;
 }
 .ft-content p{
-    font-size: 1.15vh;
+    font-size: 1.75vh;
     margin-top: 1.5vh;
 }
 .quote-div{
@@ -142,14 +142,14 @@ body{
     color: #33A9FE;
 }
 .customer-div{
-    margin-top: 15vh;
+    margin-top: 17.5vh;
 }
 .customer-div h2, .customer-div p{
     text-align: center;
     letter-spacing: 1px;
 }
 .customer-div h2{
-    font-size: 3.5vh;
+    font-size: 5vh;
 }
 .customer-div h2 span{
     color: #33A9FE;
@@ -164,8 +164,8 @@ body{
     margin-left: 2.5vh;
 }
 .customer-div ul li{
-    width: 26.5vh;
-    height: 17.5vh;
+    width: 35vh;
+    height: 20vh;
     background: #121E2A;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -179,7 +179,7 @@ body{
     transition: all 0.2s ease;
 }
 .customer-div ul li span{
-    font-size: 3.5vh;
+    font-size: 5vh;
     padding-left: 1.75vh;
     color: #121E2A;
 }
@@ -187,17 +187,17 @@ body{
     text-align: left;
     margin-left: 2.5vh;
     margin-top: 1vh;
-    font-size: 1vh;
+    font-size: 1.5vh;
 }
 .customer-div ul li h4{
     position: absolute;
-    margin-left: 6.5vh;
-    margin-top: -3.25vh;
+    margin-left: 7.5vh;
+    margin-top: -5vh;
 }
 .customer-div ul li h6{
     position: absolute;
-    margin-left: 6.5vh;
-    margin-top: -1.65vh;
+    margin-left: 7.65vh;
+    margin-top: -2vh;
 }
 .customer-div ul li:hover{
     background: #121E2A;
@@ -213,13 +213,13 @@ body{
     color: #FAC762;
 }
 .banner-div{
-    height: 20vh;
+    height: 25vh;
     background: #33A9FE;
     margin-top: 5vh;
     color: #121E2A;
 }
 .banner-div h2{
-    font-size: 3vh;
+    font-size: 5vh;
     text-align: center;
     margin-top: 5vh;
 }
@@ -228,11 +228,11 @@ body{
 }
 .banner-div p{
     text-align: center;
-    font-size: 1.35vh;
+    font-size: 2vh;
     color: #eee;
 }
 .footer-div{
-    height: 10vh;
+    height: 15vh;
     background: #121E2A;
 }
 #reg{
@@ -241,72 +241,79 @@ body{
 .nav-div ul{
     list-style: none;
     display: flex;
-    margin-left: 36.5vh;
-    width: 27.5vh;
-    padding-top: 2.5vh;
+    margin-left: 38.5%;
+    width: 45vh;
+    padding-top: 3.5vh;
 }
 .nav-div ul a{
     color: #eee;
-    font-size: 1.5vh;
+    font-size: 2vh;
     text-decoration: none;
 }
 .foot-log{
-    width: 3.5vh;
-    height: 3.5vh;
+    width: 5vh;
+    height: 5vh;
     background: #eee;
     position: absolute;
     border-radius: 100%;
-    margin-top: 3.5vh;
-    margin-left: 2.5vh;
+    margin-top: 6vh;
+    margin-left: 3.5vh;
 }
 .footer-div h2{
     color: #33A9FE;
     letter-spacing: 1.5px;
     position: absolute;
-    margin-left: 7.5vh;
-    margin-top: 4.25vh;
+    margin-left: 10vh;
+    margin-top: 6.5vh;
 }
 .footer-div p{
     color: #eee;
     font-weight: 700;
     letter-spacing: 1.5px;
     position: absolute;
-    margin-left: 75vh;
-    margin-top: 4.75vh;
+    margin-left: 85%;
+    margin-top: 6.5vh;
 }
 .login-div,.reg-div{
     position: absolute;
-    width: 35vh;
-    margin-left: 10vh;
+    margin-left: 17.5vh;
 }
 .login-div{
-    margin-top: 9.5vh;
+    margin-top: 20vh;
+    width: 65vh;
 }
 .reg-div{
     margin-top: 6.75vh;
+    width: 90vh;
 }
 .login-div h1,.reg-div h1{
-    font-size: 3.5vh;
+    font-size: 7.5vh;
 }
 .login-div p,.reg-div p{
-    margin-top: 1.5vh;
+    margin-top: 2vh;
     letter-spacing: 1px;
+}
+.reg-div p{
+    margin-left: 3.5vh;
 }
 .login-div p a ,.reg-div p a{
     color: #33A9FE;
     text-decoration: none;
 }
 .login-div form,.reg-div form{
-    margin-top: 3.5vh;
+    margin-top: 5vh;
 }
 .form-gp{
-    margin-bottom: 2.5vh;
+    margin-bottom:3.5vh;
+}
+.reg-div .form-gp{
+    margin-left: 3.5vh;
 }
 .form-gp input{
     margin-top: 1vh;
-    width: 25vh;
-    height: 2.5vh;
-    padding-left: 1vh;
+    width: 40vh;
+    height: 5vh;
+    padding-left: 2.5vh;
     font-family: 'sofia pro', sans-serif;
     border-radius: 5px;
     border: none;
@@ -318,15 +325,22 @@ body{
 .form-gp input:focus{
     outline: none !important; 
 }
+.form-gp input::placeholder{
+    color: #eee;
+}
 .login-div .submit, .reg-div .submit{
-    width: 15vh;
-    height: 3vh;
-    font-size: 1.25vh;
-    background: #33A9FE;
+    width: 20vh;
+    height: 5vh;
+    font-size: 2vh;
+    background:#33A9FE;
     border: none;
     color: #eee;
-    border-radius: 2vh;
+    border-radius: 10px;
+    font-family: 'sofia pro', sans-serif;
     cursor: pointer;
+}
+.reg-div .submit{
+    margin-left: 3.5vh;
 }
 .error-div{
     color: red;
@@ -482,10 +496,10 @@ body{
 }
 .button-div{
     width: 90%;
-    height: 32.5vh;
+    height: 28.5vh;
     background: #1F2E43;
     margin-left: 5%;
-    margin-top: 40vh;
+    margin-top: 45vh;
     border-radius: 1.5vh;
 }
 .log-info{
@@ -520,7 +534,7 @@ body{
     font-size: 1.5vh;
 }
 .button-div{
-    padding-top: 5.5vh;
+    padding-top: 5vh;
 }
 .icons-1,.icons-2{
     display: flex;
@@ -641,10 +655,10 @@ body{
 }
 .timeline-list h4{
     font-size: 3.5vh;
-    margin-bottom: 2vh;
+    margin-bottom: 3.5vh;
 }
 .timeline-list li{
-    margin-bottom: 2.5vh;
+    margin-bottom: 3.5vh;
     padding-left: 2vh;
     font-size: 2.5vh;
 }
@@ -700,24 +714,24 @@ body{
 }
 .cart-div{
     position: absolute;
-    height: 10vh;
-    margin-left:33.5vh;
-    margin-top: 3.5vh;
+    height: 15vh;
+    margin-left:33.5%;
+    margin-top: 7.5vh;
 }
 .cart-div span{
-    font-size: 2.5vh;
+    font-size: 5vh;
     color: #35DF91;
 }
 .cart-div h2{
-    font-size: 2.5vh;
+    font-size: 5vh;
     color: #eee;
     letter-spacing: 1px;
     margin-top: 1.35vh;
-    margin-left: 5vh;
+    margin-left: 10vh;
 }
 .cart-div p{
     color: #eee;
-    margin-left: 5vh;
+    margin-left: 10vh;
     margin-top: 1.5vh;
 }
 .cart-div .material-icons-outlined{
@@ -728,14 +742,14 @@ body{
 .user-stats-div{
     position: absolute;
     display: flex;
-    width: 25vh;
-    font-size: 1.5vh;
+    width: 35vh;
+    font-size: 2.5vh;
     background: #172231;
-    padding-left: 3.5vh;
+    padding-left: 5vh;
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
-    margin-left: 6.5vh;
-    margin-top: 4.5vh;
+    margin-left: 10vh;
+    margin-top: 10vh;
     border-radius: 1vh;
 }
 .reputation{
@@ -745,8 +759,8 @@ body{
     position: absolute;
     color: #eee;
     letter-spacing: 1px;
-    margin-left: 8.5vh;
-    margin-top: 16.5vh;
+    margin-left: 10vh;
+    margin-top: 35vh;
 }
 .market-h2 h2{
     margin-top: 5px;
@@ -761,7 +775,7 @@ body{
     margin-top: 20.5vh;
 }
 .line-d{
-    width: 3.5vh;
+    width: 5vh;
     height: 3.5px;
     border-radius: 10px;
     background-color: #35DF91;
@@ -792,13 +806,13 @@ body{
     color: #eee;   
 }
 .title-span h2{
-    font-size: 2.5vh;
+    font-size: 5vh;
     letter-spacing: 1px;
 }
 .title-span{
     position: absolute;
     margin-top: 7.5vh;
-    margin-left: 25vh;
+    margin-left: 35vh;
 }
 .title-span h2{
     margin-left: 3.5vh;
@@ -812,12 +826,12 @@ body{
 }
 .title-span .material-icons-outlined{
     color: #F47960;
-    font-size: 1.5vh;
+    font-size: 2vh;
 }
 .ans-div {
     position: absolute;
-    margin-left: 25vh;
-    margin-top: 15vh;
+    margin-left: 35vh;
+    margin-top: 25vh;
 }
 .ans-div #sent{
     font-size: 2.5vh;
@@ -847,34 +861,27 @@ body{
     outline: none;
 }
 .a-b{
-    width: 20vh;
+    width: 25vh;
     font-family: 'sofia pro';
-    height: 3.5vh;
+    height: 5vh;
     background: #33A9FE;
     font-size: 2vh;
     color: #eee;
     letter-spacing: 1px;
     border: none;
-    border-radius: 2vh;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 5vh;
     margin-left: 5vh;
 }
-.sent-div h1{
-    font-size: 10vh;
-    color: #172231;
-    letter-spacing: 1px;
-    position: absolute;
-    margin-top: 46.5vh;
-    text-align: center;
-}
+
 .quiz-div{
     height: 100vh;
     background: #121E2A;
     color: #eee;
 }
 .quiz-div h2{
-    font-size: 3.5vh;
+    font-size: 5vh;
     letter-spacing: 1px;
 }
 .quiz-div h2 span{
@@ -884,11 +891,12 @@ body{
     position: absolute;
     margin-top: 5vh;
     padding-left: 15vh;
+    margin-left: 45vh;
 }
 .quiz-form{
-    margin-top: 15vh;
+    margin-top: 20vh;
     width: 40vh;
-    margin-left: 20.5vh;
+    margin-left: 60vh;
 }
 .quiz-form p{
     letter-spacing: 1px;
@@ -898,9 +906,9 @@ body{
 }
 .quiz-form input{
     font-family: 'sofia pro', sans-serif;
-    height: 2.5vh;
+    height: 5vh;
     padding-left: 1.5vh;
-    font-size: 1.5vh;
+    font-size: 2vh;
     border-bottom: 2px solid #33A9FE;
     border-top: none;
     border-left: none;
@@ -915,12 +923,12 @@ body{
 .quiz-form button{
     margin-top: 5vh;
     font-family: 'sofia pro', sans-serif;
-    width: 20vh;
-    height: 3.5vh;
+    width: 25vh;
+    height: 5vh;
     font-size: 2vh;
     color: #eee;
     background: #33A9FE;
-    border-radius: 2vh;
+    border-radius: 10px;
     border:none;
     cursor: pointer;
 }
@@ -998,14 +1006,14 @@ body{
 }
 .modal,.modal-1{
     display: none;
-    width: 35vh;
-    height: 20vh;
+    width: 55vh;
+    height: 35vh;
     background-color: #172231;
     position: absolute;
-    margin-top: 15vh;
+    margin-top: 25vh;
     padding: 10px;
     border-radius: 1vh;
-    margin-left: 32.5vh;
+    margin-left: 60vh;
 
 }
 .complain,.repo{
@@ -1016,7 +1024,7 @@ body{
     position: absolute;
     background-color: rgba(0, 0, 0  ,0.5);
     height: 100vh;
-    margin-top:-55vh;
+    margin-top:-100vh;
     display: none;
 }
 @keyframes modal-animation {
@@ -1028,10 +1036,11 @@ body{
     }
 }
 .close,.close-1{
-    width: 2.5vh;
-    height: 2.5vh;
-    font-size: 1.25vh;
-    margin-left: 30vh;
+    width: 5vh;
+    height: 5vh;
+    font-size: 3.5vh;
+    margin-left: 45vh;
+    margin-top: 1.5vh;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -1039,24 +1048,24 @@ body{
     transition: all 0.5s ease;
 }
 .close:hover,.close-1:hover{
-    font-size: 1.5vh;
+    font-size: 3.75vh;
 }
 .leaderboard-content{
     position: absolute;
-    margin-top: 5vh;
-    margin-left: 35vh;
+    margin-top: 7.5vh;
+    margin-left: 35%;
     color: #eee;
-    font-size: 2vh;
+    font-size: 4vh;
 }
 .leaderboard-content h2{
-    margin-left: 3.5vh;
+    margin-left: 7.5vh;
 }
 .leaderboard-content h2 span{
     color: #FAC762;
 }
 .leaderboard-content p{
-    font-size: 1.5vh;
-    margin-left: 3.5vh;
+    font-size: 2.5vh;
+    margin-left: 7.5vh;
 }
 .leaderboard-content .material-icons-outlined{
     color: #FAC762;
@@ -1066,24 +1075,24 @@ body{
 .user-rank{
     background-color: #1F2E43;
     color: #eee;
-    width: 20vh;
+    width: 25vh;
     padding-left: 5vh;
     padding-right: 5vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
     border-radius: 1vh;
     position: absolute;
-    margin-top: 4.5vh;
-    margin-left: 3.5vh;
+    margin-top: 7.5vh;
+    margin-left: 12.5vh;
 }
 .user-rank h3{
     color: #FAC762;
 }
 .user-rank p{
     position: absolute;
-    margin-top: -1.7vh;
-    margin-left: 7vh;
-    font-size: 1.5vh;
+    margin-top: -3vh;
+    margin-left: 12.5vh;
+    font-size: 2.5vh;
 }
 .rank{
     background: rgba(23, 51, 75, 0.09);
@@ -1096,70 +1105,70 @@ body{
 }
 #rank0{
     position: absolute;
-    margin-top: 20vh;
-    margin-left: 38.5vh;
-    height: 25vh;
-    width: 22.5vh;
+    margin-top: 37.5vh;
+    margin-left: 39%;
+    height: 35vh;
+    width: 40vh;
 }
 #rank1{
-    height: 20vh;
-    width: 22.5vh;
+    height: 30vh;
+    width: 40vh;
     position: absolute;
-    margin-top: 25vh;
-    margin-left: 10vh;
+    margin-top: 42.4vh;
+    margin-left: 12.5%;
 }
 #rank2{
-    height: 18.5vh;
-    width: 22.5vh;
+    height: 25vh;
+    width: 40vh;
     position: absolute;
-    margin-top: 26.5vh;
-    margin-left: 67vh;
+    margin-top: 47.5vh;
+    margin-left: 68.5%;
 }
 .rank-div h2:nth-child(1){
-    font-size: 5vh;
+    font-size: 10vh;
     position: absolute;
     font-weight: 800;
     letter-spacing: 1px;
     color: #33A9FE;
     text-align: center;
-    margin-top: 16vh;
+    margin-top: 30vh;
 }
 .rank-div h2:nth-child(2){
-    font-size: 5vh;
+    font-size:10vh;
     position: absolute;
     font-weight: 800;
     letter-spacing: 1px;
     color: #FAC762;
-    margin-left: 12.5vh;
-    margin-top: 21vh;
+    margin-left: 27.5vh;
+    margin-top: 35vh;
 }
 .rank-div h2:nth-child(3){
-    font-size: 5vh;
+    font-size: 10vh;
     position: absolute;
     font-weight: 800;
     letter-spacing: 1px;
     color: #35DF91;
-    margin-left: 72.5vh;
-    margin-top: 22.5vh;
+    margin-left: 73.5%;
+    margin-top: 40vh;
 }
 
 #rank0 .material-icons-outlined{
-    font-size: 12.5vh;
+    font-size: 17.5vh;
     color: #eee;
 }
 #rank1 .material-icons-outlined{
-    font-size: 10vh;
+    font-size: 15vh;
     color: #eee;
 }
 #rank2 .material-icons-outlined{
-    font-size: 7.5vh;
+    font-size: 10vh;
     color: #eee;
 }
 #rank0 button{
-    width: 20vh;
-    height: 3vh;
+    width: 25vh;
+    height: 5vh;
     font-family: 'sofia pro', sans-serif;
-    font-size: 1.5vh;
+    font-size: 2.5vh;
     border-radius: .5vh;
     background: #1f2e43a1;
     color: #eee;
@@ -1169,9 +1178,9 @@ body{
 }
 #rank1 button{
     width: 20vh;
-    height: 3vh;
+    height: 5vh;
     font-family: 'sofia pro', sans-serif;
-    font-size: 1.5vh;
+    font-size: 2.5vh;
     border-radius: .5vh;
     background: #1f2e43a1;
     color: #eee;
@@ -1181,9 +1190,9 @@ body{
 }
 #rank2 button{
     width: 20vh;
-    height: 3vh;
+    height: 5vh;
     font-family: 'sofia pro', sans-serif;
-    font-size: 1.5vh;
+    font-size: 2.5vh;
     border-radius: .5vh;
     background: #1f2e43a1;
     color: #eee;
@@ -1227,12 +1236,12 @@ body{
     cursor:pointer;
 }
 .instruct-div form button{
-    width: 15vh;
+    width: 20vh;
     position: absolute;
     transition: all ease;
     display: block;
     left: 42.5%;
-    height: 3.5vh;
+    height: 5vh;
     background-color: #33A9FE;
     border-radius: 10px;
     font-size: 1.25vh;
@@ -1240,7 +1249,7 @@ body{
     letter-spacing: 1px;
     border:none;
     color: #eee;
-    margin-top: 5vh;
+    margin-top: 10.5vh;
     cursor:pointer;
 }
 .instruct-div{
@@ -1273,26 +1282,28 @@ body{
 }
 .power-up-div{
     position: absolute;
-    width: 50vh;
-    margin-top: 15vh;
-    margin-left: 35vh;
+    margin-top: 35vh;
+    margin-left: 50vh;
 }
-.power-up-div button{
+.power-form{
+    margin-top: 2.5vh;
+}
+.power-form button{
     width: 15vh;
-    font-family: 'sofia pro', sans-serif;
-    height: 3vh;
-    font-size: 1.2vh;
-    font-weight: bold;
-    background-color: #172231;
-    color: #eee;
+    height: 3.5vh;
+    background-color: #33A9FE;
     border-radius: 10px;
+    font-size: 1.5vh;
+    font-family: 'sofia pro',sans-serif;
+    letter-spacing: 1px;
     border:none;
-    cursor: pointer;
+    color: #eee;
+    cursor:pointer;
 }
 .modal form,.modal-1 form{
     position: absolute;
-    width: 25vh !important;
-    margin-left: 5vh;
+    width: 37.5vh !important;
+    margin-left: 7.5vh;
     margin-top: 1.5vh;
 }
 
@@ -1301,8 +1312,8 @@ body{
     color: #eee;
     border: none;
     font-family: 'sofia pro', sans-serif;
-    height: 2vh;
-    font-size: 1.25vh;
+    height: 5vh;
+    font-size: 2vh;
     border-bottom: 2px solid #eee;
 }
 .modal form #complain:focus{
@@ -1325,16 +1336,16 @@ body{
     border: none;
     background: #121E2A;
     color: #eee;
-    font-size: 1.25vh;
+    font-size: 2vh;
 }
 .modal form select:focus ,.modal-1 form select:focus{
     outline: none;
 }
 
 .modal form #submit,.modal-1 form #submit{
-    margin-top: 2.5vh;
-    font-family: 'spfia pro', sans-serif;
-    font-size: 1.25vh;
+    margin-top: 3.5vh;
+    font-family: 'sofia pro', sans-serif;
+    font-size: 2vh;
     padding-top: 7.5px;
     padding-bottom: 7.5px;
     background: #33A9FE;
@@ -1353,13 +1364,14 @@ body{
 .powers{
     display: flex;
     justify-content: space-between;
-    margin-top: 22.5vh;
+    margin-top: 45vh;
     margin-left: 7.5vh;
+    width: 100vh;
     position: absolute;
 }
 .power-card{
-    width: 20vh;
-    height: 20vh;
+    width: 30vh;
+    height: 30vh;
     background: #1F2E43;
     border-radius: 10px;
     margin-left: 2vh;
@@ -1370,6 +1382,6 @@ body{
     color: #eee;
 }
 .power-card h2{
-    padding-top: 3vh;
+    padding-top: 5vh;
     color: #eee;
 }

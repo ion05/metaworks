@@ -48,11 +48,10 @@
     <div class="market-h2">
         <div class="line-d"></div>
         <h2>
-            Currently Using
+            Currently Available
         </h2>
     </div>
-    <%if (typeof power == 'undefined') {%>
-    <div class="market-banner">
+    <!-- <div class="market-banner">
         <div class="circle">
             <span class="material-icons-outlined">
                 expand_less
@@ -72,44 +71,41 @@
                 Activate
             </button>
         </div>
-    </div>
-    <%} else{%>
-    <div class="power-up-div">
-        <form class="power-form" method="post">
-            <button type="submit">Buy</button>
-        </form>
-    </div>
+    </div> -->
     <div class="powers">
-        <%if (power == 'energy'){%>
             <div class="power-card">
-                <br>
+                <br><br>
                 <span class="material-icons-outlined">
                     bolt
                 </span>
-                <br>
-                <h2><%=power%></h2>
+                <h2>Energy</h2>
+                <form class="power-form" id="p1" method="post">
+                    <button type="submit">Buy</button>
+                </form>
             </div>
-        <%} else if (power == 'money'){%>
             <div class="power-card">
-                <br>
+                <br><br>
                 <span class="material-icons-outlined">
                     monetization_on
                 </span>
                 <br>
-                <h2><%=power%></h2>
+                <h2>Money</h2>
+                <form class="power-form" id="p2" method="post">
+                    <button type="submit">Buy</button>
+                </form>
             </div>
-        <%} else if (power == 'repo'){%>
             <div class="power-card">
-                <br>
+                <br><br>
                 <span class="material-icons-outlined">
                     star
                 </span>
                 <br>
-                <h2><%=power%></h2> 
+                <h2>Reputation</h2> 
+                <form class="power-form" id="p3" method="post">
+                    <button type="submit">Buy</button>
+                </form>
             </div>
-        <%}%>
     </div>
-    <%}%>
     <div class="currency-shop-div"></div>
     <div class="nav-dash">
         <ul class="nav-dash-ul">
@@ -130,19 +126,9 @@
     </div>
 </div>
 <script>
-    var a = Math.floor(Math.random()*3 +1 )
-    var b = document.querySelector('.power-form')
-    switch(a){
-        case 1:
-            b.setAttribute('action','/dashboard/market/repo')
-            break;
-        case 2:
-            b.setAttribute('action','/dashboard/market/money')
-        case 3:
-            b.setAttribute(
-                'action','/dashboard/market/energy'
-            )
-    }
+    document.querySelector('#p1').setAttribute('action', '/dashboard/market/energy');
+    document.querySelector('#p2').setAttribute('action', '/dashboard/market/money');
+    document.querySelector('#p3').setAttribute('action', '/dashboard/market/reputation');
 </script>
 <script src="/js/app.js"></script>
 <!-- <h1>
