@@ -44,12 +44,12 @@ body{
 .title-div a {
     background: #eee;
     color: #121E2A;
-    font-size: 2vh;
-    padding-left: 2.5vh;
-    padding-right: 2.5vh;
+    font-size: 3vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    border-radius: 2vh;
+    border-radius: 5vh;
     text-decoration: none;
     transition:  0.1s ease;
 }
@@ -114,7 +114,7 @@ body{
     margin-top: 5vh;
 }
 .ft-content{
-    margin-left: 100vh;
+    margin-left: 120vh;
     margin-top: 10vh;
 }
 .feature-div h4{
@@ -241,8 +241,9 @@ body{
 .nav-div ul{
     list-style: none;
     display: flex;
-    margin-left: 38.5%;
+    margin:auto;
     width: 45vh;
+    padding-left: 5vh;
     padding-top: 3.5vh;
 }
 .nav-div ul a{
@@ -359,8 +360,8 @@ body{
 }
 .nav-dash{
     position: absolute;
-    margin-top: 90vh;
-    margin-left: 70vh;
+    margin-top: 91vh;
+    margin-left: 40%;
 }
 .nav-dash-ul {
     display: flex;
@@ -1013,7 +1014,7 @@ body{
     margin-top: 25vh;
     padding: 10px;
     border-radius: 1vh;
-    margin-left: 60vh;
+    margin-left: 37.5%;
 
 }
 .complain,.repo{
@@ -1207,29 +1208,30 @@ body{
 }
 .wellcome
 {
-  width: 750px;
+  width:100%;
   height: 180px;
-  position: absolute;
-  top: calc(45% - 90px);
-  left: calc(43.5% - 300px);
+  /* position: absolute; */
+  display: block;
+  margin: auto;
+  margin-top: 30vh;
   text-align: center;
-  font-size: 6.5vh;
+  font-size: 7.5vh;
   letter-spacing: 1px;
   color: #eee;
 }
 .button-intro{
     width: 20vh;
-    position: absolute;
+    z-index: 3;
     animation: button 1s ease-in;
     transition: all ease;
     display: block;
-    left: 42.5%;
     height: 5vh;
     background-color: #33A9FE;
     border-radius: 10px;
     font-size: 2vh;
+    margin: auto;
     font-family: 'sofia pro',sans-serif;
-    margin-top: 45vh;
+    margin-top: 5vh;
     letter-spacing: 1px;
     border:none;
     color: #eee;
@@ -1270,11 +1272,11 @@ body{
 @keyframes button {
     from{
         opacity: 0;
-        margin-top: 50vh;
+        margin-top: 15vh;
     }
     to{
         opacity: 1;
-        margin-top: 45vh;
+        margin-top: 10vh;
     }
 }
 .instruct-div{
