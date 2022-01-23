@@ -400,9 +400,11 @@ body{
 
 .log-dash-i{
     position: absolute;
-    width: 5vh;
+    width: 7.5vh;
     height: 5vh;
-    background: #eee;
+    background: url('https://media.discordapp.net/attachments/927153298983755837/934796020087410758/logo_alternate.png');
+    background-size: cover;
+    transform: scale(2);
     border-radius: 100%;
     margin-left: 6.5vh;
     margin-top: 90vh;
@@ -433,9 +435,9 @@ body{
 }
 .user-blob{
     position: absolute;
-    margin-top: 75vh;
+    margin-top: 80vh;
     width: 25vh;
-    height: 10vh;
+    height: 5vh;
     background: rgba(0, 0, 0  ,0.5);
     margin-left: 80%;
     padding:5px;
@@ -449,7 +451,6 @@ body{
     padding-top: .5vh;
     width: 95%;
     padding-bottom: .5vh;
-    margin-top: 5vh;
 }
 .user-blob span:hover{
     background: red;
@@ -463,29 +464,7 @@ body{
     margin-bottom: 5vh;
     letter-spacing: 1px;
 }
-.user-blob .prof{
-    text-align: center;
-    border-radius: 5px;
-    position: absolute;
-    padding-top: .5vh;
-    width: 95%;
-    padding-bottom: .5vh;
-    margin-top: .5vh;
-}
-.user-blob .prof:hover{
-    background: transparent;
-}
-.user-blob .prof a:hover{
-    color: #33A9FE;
-}
-.line{
-    position: absolute;
-    width: 90.5%;
-    margin-left: .5vh;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-top: 4.2vh;
-}
+
 .prof-div{
     width: 40vh;
     height: 75vh;
@@ -580,7 +559,16 @@ body{
     margin-left: 35%;
     margin-top: 30vh;
     overflow-y: scroll ;
+    width: 58vh;
     height:50vh; 
+}
+.curr-div::-webkit-scrollbar {
+    width: 16px !important;
+    background: transparent;
+}
+.curr-div::-webkit-scrollbar-thumb {
+    background-color: #eee; 
+    border-radius: 100px;
 }
 .curr-line{
     width: 7.5vh;
@@ -1076,7 +1064,7 @@ body{
 .user-rank{
     background-color: #1F2E43;
     color: #eee;
-    width: 35vh;
+    width: 25vh;
     padding-left: 5vh;
     padding-right: 5vh;
     padding-top: 2vh;
