@@ -288,7 +288,7 @@ switch (type) {
         var userr = req.user
         if (userr.reputation % 10 == 0) {
             const money = 0 
-            const energy = 5
+            const energy = -1
             const repo = 5 
             const newActivity = new activity({
                 name: "Complain",
@@ -298,7 +298,7 @@ switch (type) {
                 reputation: repo,
             })
             newActivity.save()
-            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
+            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, reputation: repo, energy:energy}}).then(doc => {
                 res.render('result', {
                     correct: "Complaint Successfull",
                     activity: "Working Conditions Complaint",
@@ -359,7 +359,7 @@ switch (type) {
         var userr = req.user
         if (userr.reputation % 5 == 0) {
             const money = 0 
-            const energy = 5
+            const energy = -1
             const repo = 5 
             const newActivity = new activity({
                 name: "Complain",
@@ -369,7 +369,7 @@ switch (type) {
                 reputation: repo,
             })
             newActivity.save()
-            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, energy: energy, reputation: repo}}).then(doc => {
+            user.findOneAndUpdate({username: userr.username}, {$inc: {money: money, reputation: repo, energy:energy}}).then(doc => {
                 res.render('result', {
                     correct: "Complaint Successfull",
                     activity: "Work Load Complaint",
@@ -436,7 +436,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
             const repoo = req.user.reputation
             if (repoo % 5 == 0 ) {
                 var money = 200
-                var energy = 0 
+                var energy = -1
                 var repo = -2 
                 const newActivity = new activity({
                     username: username,
@@ -507,7 +507,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
             if (repooo % 10 == 0 ) {
                 console.log('approve')
                 var money =  400
-                var energy = 0 
+                var energy = -1
                 var repo = 2
                 const newActivity = new activity({
                     username: username,
