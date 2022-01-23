@@ -701,7 +701,7 @@ body{
     color: #33A9FE;
 }
 .hello-div p{
-    margin-left: 13.5vh;
+    margin-left: 12.5vh;
 }
 .hello-div .material-icons-outlined{
     font-size: 2.5vh;
@@ -1116,14 +1116,14 @@ body{
     width: 40vh;
     position: absolute;
     margin-top: 42.4vh;
-    margin-left: 12.5%;
+    margin-left: 15%;
 }
 #rank2{
     height: 25vh;
     width: 40vh;
     position: absolute;
     margin-top: 47.5vh;
-    margin-left: 68.5%;
+    margin-left: 63%;
 }
 .rank-div h2:nth-child(1){
     font-size: 10vh;
@@ -1131,7 +1131,7 @@ body{
     font-weight: 800;
     letter-spacing: 1px;
     color: #33A9FE;
-    text-align: center;
+    margin-left: 45%;
     margin-top: 30vh;
 }
 .rank-div h2:nth-child(2){
@@ -1140,7 +1140,7 @@ body{
     font-weight: 800;
     letter-spacing: 1px;
     color: #FAC762;
-    margin-left: 27.5vh;
+    margin-left: 16.75%;
     margin-top: 35vh;
 }
 .rank-div h2:nth-child(3){
@@ -1149,7 +1149,7 @@ body{
     font-weight: 800;
     letter-spacing: 1px;
     color: #35DF91;
-    margin-left: 73.5%;
+    margin-left: 67.5%;
     margin-top: 40vh;
 }
 
@@ -1386,4 +1386,18 @@ body{
 .power-card h2{
     padding-top: 5vh;
     color: #eee;
+}
+.user-curr-power{
+    background-color: #1F2E43;
+    position: absolute;
+    width: 35vh;
+    padding-left: 2.5vh;
+    padding-right: 3vh;
+    padding-top: 2.5vh;
+    padding-bottom: 3vh;
+    /* height: 7.5vh; */
+    border-radius: 10px;
+    color: #eee;
+    margin-left: 75%;
+    margin-top: 10vh;
 }
