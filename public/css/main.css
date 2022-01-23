@@ -1218,18 +1218,18 @@ body{
   color: #eee;
 }
 .button-intro{
-    width: 15vh;
+    width: 20vh;
     position: absolute;
     animation: button 1s ease-in;
     transition: all ease;
     display: block;
     left: 42.5%;
-    height: 3.5vh;
+    height: 5vh;
     background-color: #33A9FE;
     border-radius: 10px;
-    font-size: 1.25vh;
+    font-size: 2vh;
     font-family: 'sofia pro',sans-serif;
-    margin-top: 35vh;
+    margin-top: 45vh;
     letter-spacing: 1px;
     border:none;
     color: #eee;
@@ -1240,11 +1240,11 @@ body{
     position: absolute;
     transition: all ease;
     display: block;
-    left: 42.5%;
+    left: 45%;
     height: 5vh;
     background-color: #33A9FE;
     border-radius: 10px;
-    font-size: 1.25vh;
+    font-size: 2vh;
     font-family: 'sofia pro',sans-serif;
     letter-spacing: 1px;
     border:none;
@@ -1270,11 +1270,11 @@ body{
 @keyframes button {
     from{
         opacity: 0;
-        margin-top: 37.5vh;
+        margin-top: 50vh;
     }
     to{
         opacity: 1;
-        margin-top: 35vh;
+        margin-top: 45vh;
     }
 }
 .instruct-div{
