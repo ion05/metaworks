@@ -65,6 +65,7 @@ router.get('/work', ensureAuthenticated, async (req, res) => {
 
 
                     }
+                    
                     const questions = []
                     const answers = []
                     const numbers = []

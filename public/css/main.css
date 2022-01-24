@@ -868,6 +868,7 @@ body{
     height: 100vh;
     background: #121E2A;
     color: #eee;
+    
 }
 .quiz-div h2{
     font-size: 5vh;
@@ -880,18 +881,19 @@ body{
     position: absolute;
     margin-top: 5vh;
     padding-left: 15vh;
-    margin-left: 45vh;
+    margin-left: 46.5vh;
 }
 .quiz-form{
+    width: 60vh;
+    display: block;
+    margin: auto;
     margin-top: 20vh;
-    width: 40vh;
-    margin-left: 60vh;
 }
 .quiz-form p{
     letter-spacing: 1px;
-    font-size: 1.5vh;
-    margin-bottom: 1vh;
-    margin-top: 00.5vh;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+    margin-top: 1vh;
 }
 .quiz-form input{
     font-family: 'sofia pro', sans-serif;
@@ -908,6 +910,9 @@ body{
 }
 .quiz-form input:focus{
     outline: none;
+}
+.quiz-form input::placeholder{
+    color: #eee;
 }
 .quiz-form button{
     margin-top: 5vh;
