@@ -40,8 +40,8 @@ router.get('/intro', ensureAuthenticated ,(req, res) => {
 
 router.get('/work', ensureAuthenticated, async (req, res) => {
     // generate random number between 1 and 4
-    const randomNumber = Math.floor(Math.random() * 3) + 1;
-//     const randomNumber = 1
+    const randomNumber = Math.floor(Math.random() * 2) + 1;
+    console.log(randomNumber)
     // render the corresponding page
     switch(randomNumber)  {
         case 1:
@@ -85,6 +85,14 @@ router.get('/work', ensureAuthenticated, async (req, res) => {
                         user: req.user
                         })
             }
+            res.cookie('answers', answers)
+            // render the page
+            res.render('quiz', {
+                questions: questions,
+                answers: answers,
+                numbers: numbers,
+                user: req.user
+                })
         })
             break;
         case 2:
