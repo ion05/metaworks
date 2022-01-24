@@ -952,37 +952,34 @@ body{
 .result-div{
     height: 100vh;
     background: #121E2A;
+    text-align: center;
 }
 .result-div h2{
     color: #eee;
-    font-size: 3.5vh;
+    font-size: 7.5vh;
     letter-spacing: 1px;
-    position: absolute;
-    margin-top: 2.5vh;
-    margin-left: 5vh;
+    margin-top: 5vh;
 }
 .res-span{
-    position: absolute;
-    margin-left: 7.5vh;
     margin-top: 7.5vh;
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: #eee;
 }
-.result-div a{
-    width: 20vh;
-    height: 3.5vh;
+.result-div a,.fired-div a{
+    width: 25vh;
+    height: 5vh;
     font-size: 2vh;
     color: #eee;
     background: #33A9FE;
     border-radius: 2vh;
     border:none;
     cursor: pointer;
-    position: absolute;
-    margin-left: 5vh;
-    margin-top: 25vh;
     text-align: center;
     text-decoration: none;
-    padding-top: 0.5vh;
+    display: block;
+    margin: auto;
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
 }
 .curr-div h5{
     font-size: 5vh;
@@ -1388,4 +1385,18 @@ body{
     color: #eee;
     margin-left: 75%;
     margin-top: 10vh;
+}
+.fired-div{
+    background-color: #121E2A;
+    color: #eee;
+    height: 100vh;
+    text-align: center;
+}
+.fired-div h2{
+    font-size: 5vh;
+    margin-top: 5vh;
+}
+.fired-div h4{
+    font-size: 3vh;
+    margin-top: 5vh;
 }

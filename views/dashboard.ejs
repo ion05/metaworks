@@ -119,7 +119,7 @@
                     offline_bolt
                 </span>
                 <p>
-                    Current Energy: <%=  Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) + energy_per %>%
+                    Current Energy: <%= energy_per %>%
                 </p>
                 <div class="note-o">
                     <%= Math.round(( activity_list[index].energy / user.maxEnergy)*100 ) %>%
