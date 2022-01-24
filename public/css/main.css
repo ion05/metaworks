@@ -400,9 +400,11 @@ body{
 
 .log-dash-i{
     position: absolute;
-    width: 5vh;
+    width: 7.5vh;
     height: 5vh;
-    background: #eee;
+    background: url('https://media.discordapp.net/attachments/927153298983755837/934796020087410758/logo_alternate.png');
+    background-size: cover;
+    transform: scale(2);
     border-radius: 100%;
     margin-left: 6.5vh;
     margin-top: 90vh;
@@ -433,9 +435,9 @@ body{
 }
 .user-blob{
     position: absolute;
-    margin-top: 75vh;
+    margin-top: 80vh;
     width: 25vh;
-    height: 10vh;
+    height: 5vh;
     background: rgba(0, 0, 0  ,0.5);
     margin-left: 80%;
     padding:5px;
@@ -449,7 +451,6 @@ body{
     padding-top: .5vh;
     width: 95%;
     padding-bottom: .5vh;
-    margin-top: 5vh;
 }
 .user-blob span:hover{
     background: red;
@@ -463,29 +464,7 @@ body{
     margin-bottom: 5vh;
     letter-spacing: 1px;
 }
-.user-blob .prof{
-    text-align: center;
-    border-radius: 5px;
-    position: absolute;
-    padding-top: .5vh;
-    width: 95%;
-    padding-bottom: .5vh;
-    margin-top: .5vh;
-}
-.user-blob .prof:hover{
-    background: transparent;
-}
-.user-blob .prof a:hover{
-    color: #33A9FE;
-}
-.line{
-    position: absolute;
-    width: 90.5%;
-    margin-left: .5vh;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-top: 4.2vh;
-}
+
 .prof-div{
     width: 40vh;
     height: 75vh;
@@ -580,7 +559,16 @@ body{
     margin-left: 35%;
     margin-top: 30vh;
     overflow-y: scroll ;
+    width: 58vh;
     height:50vh; 
+}
+.curr-div::-webkit-scrollbar {
+    width: 16px !important;
+    background: transparent;
+}
+.curr-div::-webkit-scrollbar-thumb {
+    background-color: #eee; 
+    border-radius: 100px;
 }
 .curr-line{
     width: 7.5vh;
@@ -964,37 +952,34 @@ body{
 .result-div{
     height: 100vh;
     background: #121E2A;
+    text-align: center;
 }
 .result-div h2{
     color: #eee;
-    font-size: 3.5vh;
+    font-size: 7.5vh;
     letter-spacing: 1px;
-    position: absolute;
-    margin-top: 2.5vh;
-    margin-left: 5vh;
+    margin-top: 5vh;
 }
 .res-span{
-    position: absolute;
-    margin-left: 7.5vh;
     margin-top: 7.5vh;
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: #eee;
 }
-.result-div a{
-    width: 20vh;
-    height: 3.5vh;
+.result-div a,.fired-div a{
+    width: 25vh;
+    height: 5vh;
     font-size: 2vh;
     color: #eee;
     background: #33A9FE;
     border-radius: 2vh;
     border:none;
     cursor: pointer;
-    position: absolute;
-    margin-left: 5vh;
-    margin-top: 25vh;
     text-align: center;
     text-decoration: none;
-    padding-top: 0.5vh;
+    display: block;
+    margin: auto;
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
 }
 .curr-div h5{
     font-size: 5vh;
@@ -1400,4 +1385,18 @@ body{
     color: #eee;
     margin-left: 75%;
     margin-top: 10vh;
+}
+.fired-div{
+    background-color: #121E2A;
+    color: #eee;
+    height: 100vh;
+    text-align: center;
+}
+.fired-div h2{
+    font-size: 5vh;
+    margin-top: 5vh;
+}
+.fired-div h4{
+    font-size: 3vh;
+    margin-top: 5vh;
 }
