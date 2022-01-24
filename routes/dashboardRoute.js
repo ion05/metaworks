@@ -40,50 +40,30 @@ router.get('/intro', ensureAuthenticated ,(req, res) => {
 
 router.get('/work', ensureAuthenticated, async (req, res) => {
     // generate random number between 1 and 4
-    const randomNumber = Math.floor(Math.random() * 3) + 1;
-//     const randomNumber = 1
+    const randomNumber = Math.floor(Math.random() * 2) + 1;
+    console.log(randomNumber)
     // render the corresponding page
     switch(randomNumber)  {
         case 1:
-            // get number of documents in quiz
-            question.countDocuments({}, async (err, count) => {
-                
-                if (err) {
-                    console.log(err)
-                } else {
-                    // generate 4 random numbers between 1 and count
-                    const randomNumbers = []
-                    for (let i = 0; i < 4; i++) {
-                        const number = Math.floor(Math.random() * count) + 1
-                        // check if the number is already in the array
-                        if (randomNumbers.includes(number)) {
-                            i--
-                        }
-                        else {
-                            randomNumbers.push(number)
-                        }
-
-
-                    }
-                    const questions = []
-                    const answers = []
-                    const numbers = []
-                    // get the corresponding question with number
-                    for (let i = 0; i < 4; i++) {
-                        const doc = await question.findOne({number: randomNumbers[i]})
-                        questions.push(doc.question)
-                        answers.push(doc.answer)
-                        numbers.push(doc.number)
-                    }
-                    res.cookie('answers', answers)
-                    // render the page
-                    res.render('quiz', {
-                        questions: questions,
-                        answers: answers,
-                        numbers: numbers,
-                        user: req.user
-                        })
+            question.aggregate([{$sample: {size: 4}}]).then(data => {
+                console.log(data)    
+                const questions = []
+                const answers = []
+                const numbers = []
+            for (let i = 0; i < 4; i++) {
+                const question = data[i]
+                questions.push(question.question)
+                answers.push(question.answer)
+                numbers.push(question.number)
             }
+            res.cookie('answers', answers)
+            // render the page
+            res.render('quiz', {
+                questions: questions,
+                answers: answers,
+                numbers: numbers,
+                user: req.user
+                })
         })
             break;
         case 2:
