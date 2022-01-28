@@ -339,7 +339,7 @@ switch (type) {
             const repoC = await repoCheck(username)
             if (energyC.ok && moneyC.ok && repoC.ok) {
                 res.render('result', {
-                    correct: "Complaint Unscessfull",
+                    correct: "Complaint Unsucessfull",
                     activity: "Working Conditions Complaint",
                     money: doc.money,
                     energy: doc.energy,
@@ -408,7 +408,7 @@ switch (type) {
             const repoC = await repoCheck(username)
             if (energyC.ok && moneyC.ok && repoC.ok) {
                 res.render('result', {
-                    correct: "Complaint Unscessfull",
+                    correct: "Complaint Unsucessfull",
                     activity: "Work Load Complaint",
                     money: doc.money,
                     energy: doc.energy,
@@ -492,7 +492,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                     const energyC = await energyCheck(username)
                     if (repoC.ok && energyC.ok) {
                         res.render('result', {
-                            correct: "Request Unscessfull",
+                            correct: "Request Unsucessfull",
                             activity: "Pay Raise Request",
                             money: doc.money,
                             energy: doc.energy,
