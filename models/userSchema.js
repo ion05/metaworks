@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     },
     reputation: {
         type:Number, 
-        default:0,
+        default:2,
         required: true
     }, 
     role: {
