@@ -478,7 +478,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
             } else {
                 const money = 0
                 const energy = -2
-                const repo = -5  
+                const repo = -2
                 const newActivity = new activity({
                     username: username,
                     name: "Request",
@@ -569,7 +569,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
                 console.log('deny')
                 const money = 0
                 const energy = -2
-                const repo = -5  
+                const repo = -2  
                 console.log(username)
                 const newActivity = new activity({
                     username: username,
