@@ -275,7 +275,7 @@ router.get('/rest', ensureAuthenticated, (req,res)=> {
     
     const username = req.user.username
     const maxenergy = req.user.maxEnergy
-    user.findOneAndUpdate({username:username}, {$set: {energy: maxenergy}}).then(doc => {
+    user.findOneAndUpdate({username:username}, {$set: {energy: maxenergy}, $inc: {money:-10}).then(doc => {
         const newactivity = new activity({
             name: "Rest",
             username: username,
