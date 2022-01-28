@@ -295,7 +295,7 @@ switch (type) {
     case "1":
         console.log('hello')
         var userr = req.user
-        if (userr.reputation % 10 == 0 and userr.reputation != 0) {
+        if (userr.reputation % 10 == 0 && userr.reputation != 0) {
             const money = 0 
             const energy = -1
             const repo = 5 
@@ -366,7 +366,7 @@ switch (type) {
         break
     case "2":
         var userr = req.user
-        if (userr.reputation % 5 == 0  and userr.reputation != 0) {
+        if (userr.reputation % 5 == 0  && userr.reputation != 0) {
             const money = 0 
             const energy = -1
             const repo = 5 
@@ -443,7 +443,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
     switch (type) {
         case "1":
             const repoo = req.user.reputation
-            if (repoo % 5 == 0  and userr.reputation != 0) {
+            if (repoo % 5 == 0  && userr.reputation != 0) {
                 var money = 200
                 var energy = -1
                 var repo = -2 
@@ -513,7 +513,7 @@ router.post('/request', ensureAuthenticated, (req,res)=> {
             username  = req.user.username
             console.log(2)
             const repooo = req.user.reputation
-            if (repooo % 10 == 0  and userr.reputation != 0) {
+            if (repooo % 10 == 0  && userr.reputation != 0) {
                 console.log('approve')
                 var money =  400
                 var energy = -1
